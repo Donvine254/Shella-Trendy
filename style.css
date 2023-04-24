@@ -261,3 +261,37 @@ body {
   cursor: pointer;
   background-color: #3e8e41;
 }
+/* styling for footer section */
+#footer {
+  background-color: #423B31;
+  color: white;
+  display: flex;
+  flex-direction: flex-start;
+  flex-wrap: wrap;
+ justify-content: space-between;
+  bottom:0;
+}
+
+#footer .contact  {
+  display: block;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+#footer .contact #follow a{
+  text-decoration: none;
+  font-size: 20px;
+  color:white;
+
+}
+#footer .contact #follow a:hover{
+ text-decoration: underline;
+  color:#FFA500 
+}
+
+#footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+} 
+
