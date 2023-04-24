@@ -1,15 +1,70 @@
 body {
-  background-color:white;
+  background-color: white;
   color: white;
   font-size: larger;
   width: 100%;
+  margin: 0;
 }
-.header {
-  position:sticky;
-  box-shadow: 0 5px 15px #423B31;
-  top:0px;
+#header {
+  position: sticky;
+  background-color: #423b31;
+  box-shadow: 0 5px 15px #423b31;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:20px 80px;
+  padding: 20px 80px;
+  margin-top: 0px;
+  height: 60px;
+}
+#header #logo{
+  display:flex;
+  align-items: flex-start;
+  margin:0;
+  margin-left: 0;
+}
+#header #logo img{
+  max-width: 80%;
+  display:block;
+  margin:0;
+  margin-left: 0;
+}
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header .search-form input {
+  margin-right: 5px;
+  padding-right: 30px; 
+  border-radius: 5px;
+  height:40px;
+  font-size:20px;
+  
+}
+#header .search-form button{
+  background-color: inherit;
+  right: 5px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+}
+#header .search-form button i {
+  font-size: 20px;
+}
+.navbar #nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar #nav li {
+  list-style: none;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+.navbar #nav li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
 }
