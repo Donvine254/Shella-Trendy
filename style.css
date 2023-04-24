@@ -203,7 +203,6 @@ body {
 
 #newsletter {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   padding: 20px;
   background-color: rgb(47, 47, 156);
@@ -211,6 +210,8 @@ body {
 
 #newsletter .newstext {
   margin: 0;
+  width: 100%;
+  color:white;
 }
 
 #newsletter .newstext h4 {
@@ -228,17 +229,20 @@ body {
 
 #newsletter .newsletterform {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
-#newsletter input[type="text"] {
-  padding: 12px;
+#newsletter input {
+  padding: 0 0.125em;
   border-radius: 5px 0 0 5px;
   border: 1px solid #ccc;
   border-right: none;
-  width: 400px;
+  outline: none;
+  width: 60%;
   height: 40px;
+  font-size: 14px;
+
 }
 
 #newsletter button {
@@ -249,6 +253,8 @@ body {
   border: none;
   border-left: none;
   height: 40px;
+  width: 150px;
+
 }
 
 #newsletter button:hover {
