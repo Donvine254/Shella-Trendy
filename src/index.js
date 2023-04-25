@@ -1,12 +1,12 @@
 //append a menu and remove a menu after clicking on the categories
-const menu = document.querySelector('.menu');
-const dropdown = document.querySelector('.dropdown');
+const menu = document.querySelector(".menu");
+const dropdown = document.querySelector(".dropdown");
 let dropdownMenu = null;
 
-dropdown.addEventListener('click', () => {
+dropdown.addEventListener("click", () => {
   if (!dropdownMenu) {
-    dropdownMenu = document.createElement('ul');
-    dropdownMenu.classList.add('dropdown-menu');
+    dropdownMenu = document.createElement("ul");
+    dropdownMenu.classList.add("dropdown-menu");
     dropdownMenu.innerHTML = `
       <li><a href="#">Bags</a></li>
       <li><a href="#">Clothes</a></li>
@@ -20,62 +20,70 @@ dropdown.addEventListener('click', () => {
   }
 });
 //change webpage theme from light to dark. I set the atributes to inherit but with time i can create custom themes
-const themeIcon = document.getElementById("theme");
-const body = document.body;
+function toggleThemes() {
+  const themeIcon = document.getElementById("theme");
+  const body = document.body;
+  const footer = document.querySelector("#footer-wrapper");
 
-themeIcon.addEventListener("click", function() {
-  if (themeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-    body.style.backgroundColor = "#E3e6f3";
-    body.style.color = "black";
-    body.classList.add("dark-theme");
-    themeIcon.innerHTML = "<box-icon name='sun'></box-icon>";
-  } else {
-    body.style.backgroundColor = "";
-    body.style.color = "";
-    body.classList.remove("dark-theme");
-    themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
-  }
-});
-//add search functionality
-const searchForm = document.querySelector('.search-form');
-const searchInput = searchForm.querySelector('input');
-const searchResults = document.querySelector('.search-results');
-
-function handleSearch(event) {
-  event.preventDefault();
-  const searchQuery = searchInput.value.trim();
-  
-  if (searchQuery === '') {
-    return;
-  }
-  
-  searchResults.innerHTML = '';
-  
-  const searchResultElement = document.createElement('div');
-  searchResultElement.classList.add('search-result');
-  searchResultElement.innerHTML = 'Oops, looks like there are no great results to match your search. Please try again later.';
-  
-  const removeButton = document.createElement('button');
-  removeButton.classList.add('search-result-remove');
-  removeButton.innerHTML = 'Remove';
-  
-  removeButton.addEventListener('click', () => {
-    searchResults.removeChild(searchResultElement);
+  themeIcon.addEventListener("click", function () {
+    if (themeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
+      body.style.backgroundColor = "#E3e6f3";
+      body.style.color = "black";
+      body.classList.add("dark-theme");
+      footer.style.backgroundColor = "#E3E6F3";
+      themeIcon.innerHTML = "<box-icon name='sun'></box-icon>";
+    } else {
+      body.style.backgroundColor = "";
+      body.style.color = "";
+      footer.style.backgroundColor = "#423B31";
+      body.classList.remove("dark-theme");
+      themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }
   });
-  
-  searchResultElement.appendChild(removeButton);
-  searchResults.appendChild(searchResultElement);
-  
-  searchInput.value = '';
 }
+toggleThemes();
+//add search functionality
+function search() {
+  const searchForm = document.querySelector(".search-form");
+  const searchInput = searchForm.querySelector("input");
+  const searchResults = document.querySelector(".search-results");
+  function handleSearch(event) {
+    event.preventDefault();
+    const searchQuery = searchInput.value.trim();
 
-searchForm.addEventListener('submit', handleSearch);
-searchForm.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter') {
-    handleSearch(event);
+    if (searchQuery === "") {
+      return;
+    }
+
+    searchResults.innerHTML = "";
+
+    const searchResultElement = document.createElement("div");
+    searchResultElement.classList.add("search-result");
+    searchResultElement.innerHTML =
+      "Oops, looks like there are no great results to match your search. Please try again later.";
+
+    const removeButton = document.createElement("button");
+    removeButton.classList.add("search-result-remove");
+    removeButton.innerHTML = "Remove";
+
+    removeButton.addEventListener("click", () => {
+      searchResults.removeChild(searchResultElement);
+    });
+
+    searchResultElement.appendChild(removeButton);
+    searchResults.appendChild(searchResultElement);
+
+    searchInput.value = "";
   }
-});
-;
+
+  searchForm.addEventListener("submit", handleSearch);
+  searchForm.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      handleSearch(event);
+    }
+  });
+}
+search()
 //since the page can get larger, lets add an event listener for scroll that appends a button to return the user to the top
 function handleScroll() {
   const footer = document.querySelector("#copyright");
@@ -83,7 +91,7 @@ function handleScroll() {
   button.innerHTML = "<box-icon type='solid' name='arrow-to-top'></box-icon>";
   button.href = "#";
   button.id = "scroll-to-top";
-  button.title="go to top"
+  button.title = "go to top";
   footer.appendChild(button);
 
   button.addEventListener("click", (event) => {
@@ -112,22 +120,21 @@ function handleScroll() {
 handleScroll();
 //handle email subscription
 function handleSubscription() {
-  const input = document.getElementById('input');
-  const subscriptionButton = document.getElementById('subscription');
+  const input = document.getElementById("input");
+  const subscriptionButton = document.getElementById("subscription");
   subscriptionButton.disabled = true; // disable the button by default
-  input.addEventListener('input', function() {
-    const email = input.value.trim(); 
-    if (email !== '' && validateEmail(email)) {
+  input.addEventListener("input", function () {
+    const email = input.value.trim();
+    if (email !== "" && validateEmail(email)) {
       subscriptionButton.disabled = false; // enable the button if there's a valid email value
-      
     } else {
       subscriptionButton.disabled = true; // disable the button if the value is empty or invalid
     }
   });
-  subscriptionButton.addEventListener('click', function() {
+  subscriptionButton.addEventListener("click", function () {
     const email = input.value.trim();
-    alert(`${email} has been successfully added to our mailing list`)
-    input.value=""
+    alert(`${email} has been successfully added to our mailing list`);
+    input.value = "";
   });
   function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // regular expression pattern for email validation
@@ -136,7 +143,3 @@ function handleSubscription() {
 }
 
 handleSubscription();
-
-
-
-
