@@ -213,6 +213,10 @@ body {
   justify-content: center;
   flex-direction: column;
   margin-bottom: 30px;
+  border: 2px solid blueviolet;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 .banner h1 {
   padding-bottom: 15px;
@@ -246,7 +250,7 @@ h3 {
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: rgb(47, 47, 156);
+  background-color: #3874FF;
 }
 
 #newsletter .newstext {
