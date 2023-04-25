@@ -5,6 +5,7 @@
         "name": "blue and green shirt",
         "price": 1500,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/blue_and_green_shirt.png?raw=true",
+        "ratings":"4.8",
         "description": "A stylish blue and green shirt that will make you stand out from the crowd."
       },
       {
@@ -12,6 +13,7 @@
         "name": "colored shirt male",
         "price": 1500,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/Colored-Shirt_male.png?raw=true",
+        "ratings":"4.9",
         "description": "A comfortable and fashionable colored shirt for men."
       },
       {
@@ -19,6 +21,7 @@
         "name": "dark grey dotted shirt",
         "price": 1000,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/dark_grey_dotted_shirt.png?raw=true",
+        "ratings":"5",
         "description": "A sleek and modern dark grey shirt with subtle dotted patterns."
       },
       {
@@ -26,6 +29,7 @@
         "name": "flowered fashion shirt",
         "price": 1500,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/flowered_fashion_shirt.png?raw=true",
+        "ratings":"5",
         "description": "A trendy and feminine shirt with beautiful flower patterns."
       },
       {
@@ -33,6 +37,7 @@
         "name": "male tshirt black",
         "price": 1000,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male_black_tshirt.png?raw=true",
+        "ratings":"4.7",
         "description": "A classic and versatile black t-shirt for men."
       },
       {
@@ -40,6 +45,7 @@
         "name": "male grey fashion shirt",
         "price": 1500,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male__grey_fashion_shirt.png?raw=true",
+        "ratings":"4.8",
         "description": "A stylish and comfortable grey shirt for men who love fashion."
       },
       {
@@ -47,6 +53,7 @@
         "name": "male fashion t-shirt",
         "price": 1500,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male_fashion_tshirt.png?raw=true",
+        "ratings":"5",
         "description": "A trendy and cool t-shirt that will make you look fashion-forward."
       },
       {
@@ -54,6 +61,7 @@
         "name": "male floral black t-shirt",
         "price": 1000,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male_tshirt_black.png?raw=true",
+        "ratings":"5",
         "description": "A simple yet stylish black t-shirt with striped patterns."
       },
       {
@@ -61,6 +69,7 @@
         "name": "women fashion top",
         "price": 1000,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/women_fashion_top.png?raw=true",
+        "ratings":"4.8",
         "description": "A chic and fashionable top for women who love to dress up."
       },
       {
@@ -68,6 +77,7 @@
         "name": "grey fashion male shirt",
         "price": 1000,
         "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/grey_fashion_shirt.png?raw=true",
+        "ratings":"5",
         "description": "A trendy and stylish grey t-shirt for men who love fashion."
       }
     ],
@@ -77,6 +87,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -84,6 +95,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -91,6 +103,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -98,6 +111,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -105,6 +119,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -112,6 +127,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -119,6 +135,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -126,6 +143,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -133,6 +151,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       },
       {
@@ -140,6 +159,7 @@
         "name": "",
         "price": "",
         "image":"",
+        "ratings":"",
         "description": ""
       }  ],
       "bags": [
@@ -148,6 +168,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -155,6 +176,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -162,6 +184,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -169,6 +192,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -176,6 +200,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -183,6 +208,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -190,6 +216,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -197,6 +224,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -204,6 +232,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         },
         {
@@ -211,6 +240,7 @@
           "name": "",
           "price": "",
           "image":"",
+          "ratings":"",
           "description": ""
         }
       ]

@@ -31,8 +31,8 @@ function toggleThemes() {
       body.style.color = "black";
       body.classList.add("dark-theme");
       footer.style.backgroundColor = "#E3E6F3";
-      themeIcon.style.backgroundColor="white"
-      themeIcon.innerHTML = "<box-icon name='sun'></box-icon>";
+      themeIcon.style.backgroundColor="white";
+      themeIcon.innerHTML = "<box-icon name='sun' animation='flashing' rotate='90'color='#D37506' ></box-icon>";
     } else {
       body.style.backgroundColor = "";
       body.style.color = "";
