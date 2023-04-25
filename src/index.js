@@ -31,11 +31,13 @@ function toggleThemes() {
       body.style.color = "black";
       body.classList.add("dark-theme");
       footer.style.backgroundColor = "#E3E6F3";
+      themeIcon.style.backgroundColor="white"
       themeIcon.innerHTML = "<box-icon name='sun'></box-icon>";
     } else {
       body.style.backgroundColor = "";
       body.style.color = "";
       footer.style.backgroundColor = "#423B31";
+      themeIcon.style.backgroundColor="#8f9779"
       body.classList.remove("dark-theme");
       themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
