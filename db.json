@@ -1,0 +1,219 @@
+{
+    "clothes": [
+      {
+        "id": 1,
+        "name": "blue and green shirt",
+        "price": 1500,
+        "image":"",
+        "description": "A stylish blue and green shirt that will make you stand out from the crowd."
+      },
+      {
+        "id": 2,
+        "name": "colored shirt male",
+        "price": 1500,
+        "image":"",
+        "description": "A comfortable and fashionable colored shirt for men."
+      },
+      {
+        "id": 3,
+        "name": "dark grey dotted shirt",
+        "price": 1000,
+        "image":"",
+        "description": "A sleek and modern dark grey shirt with subtle dotted patterns."
+      },
+      {
+        "id": 4,
+        "name": "flowered fashion shirt",
+        "price": 1500,
+        "image":"",
+        "description": "A trendy and feminine shirt with beautiful flower patterns."
+      },
+      {
+        "id": 5,
+        "name": "male tshirt black",
+        "price": 1500,
+        "image":"",
+        "description": "A classic and versatile black t-shirt for men."
+      },
+      {
+        "id": 6,
+        "name": "male grey fashion tshirt",
+        "price": 1500,
+        "image":"",
+        "description": "A stylish and comfortable grey t-shirt for men who love fashion."
+      },
+      {
+        "id": 7,
+        "name": "male fashion tshirt",
+        "price": 1500,
+        "image":"",
+        "description": "A trendy and cool t-shirt that will make you look fashion-forward."
+      },
+      {
+        "id": 8,
+        "name": "male black tshirt with strips",
+        "price": 1000,
+        "image":"",
+        "description": "A simple yet stylish black t-shirt with striped patterns."
+      },
+      {
+        "id": 9,
+        "name": "women fashion top",
+        "price": 1000,
+        "image":"",
+        "description": "A chic and fashionable top for women who love to dress up."
+      },
+      {
+        "id": 10,
+        "name": "grey fashion male tshirt",
+        "price": 1000,
+        "image":"",
+        "description": "A trendy and stylish grey t-shirt for men who love fashion."
+      }
+    ],
+    "shoes": [
+      {
+        "id": 1,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 4,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 5,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 6,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 7,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 8,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 9,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      },
+      {
+        "id": 10,
+        "name": "",
+        "price": "",
+        "image":"",
+        "description": ""
+      }  ],
+      "bags": [
+        {
+          "id": 1,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 2,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 3,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 4,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 5,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 6,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 7,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 8,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 9,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        },
+        {
+          "id": 10,
+          "name": "",
+          "price": "",
+          "image":"",
+          "description": ""
+        }
+      ]
+    }
+    
+  

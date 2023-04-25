@@ -147,7 +147,7 @@ body {
 .dropdown-menu {
   top: 100%;
   left: 0;
-  z-index: 1;
+  z-index: 9999;
   list-style: none;
   padding: 15px;
   margin: 0;
@@ -372,3 +372,8 @@ h3 {
 #scroll-to-top.show {
   opacity: 1;
 }
+/* style alert box.let see if this works */
+
+
+
+
