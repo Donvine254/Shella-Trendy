@@ -1,3 +1,7 @@
+const baseUrl="https://my-json-server.typicode.com/Donvine254/Shella-Trendy"
+
+
+
 //append a menu and remove a menu after clicking on the categories
 const menu = document.querySelector(".menu");
 const dropdown = document.querySelector(".dropdown");

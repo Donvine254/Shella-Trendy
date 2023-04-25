@@ -359,6 +359,7 @@ h3 {
   width: 100%;
   text-align: center;
   font-family: Helvetica;
+  font-weight: bold;
 }
 /* styling for scroll button */
 #scroll-to-top {
