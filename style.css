@@ -6,6 +6,7 @@ body {
   width: 100%;
   margin: 0;
   font-family: Georgia, 'Times New Roman', Times, serif ;
+  
 }
 
 * {
@@ -262,36 +263,129 @@ body {
   background-color: #3e8e41;
 }
 /* styling for footer section */
+
 #footer {
   background-color: #423B31;
   color: white;
-  display: flex;
-  flex-direction: flex-start;
-  flex-wrap: wrap;
- justify-content: space-between;
-  bottom:0;
-}
-
-#footer .contact  {
-  display: block;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 20px;
-}
-#footer .contact #follow a{
-  text-decoration: none;
-  font-size: 20px;
-  color:white;
-
-}
-#footer .contact #follow a:hover{
- text-decoration: underline;
-  color:#FFA500 
-}
-
-#footer .copyright {
+  padding: 40px 0;
+  font-size: 14px;
   text-align: center;
-  margin-top: 20px;
+}
+
+/* Style for the div that contains the footer content */
+#footer > div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Style for the contact section */
+.contact {
+  flex-basis: 30%;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.contact h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Style for the follow section */
+#follow {
+  margin-top: 15px;
+}
+
+#follow h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#follow a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 24px;
+  color: white;
+  transition: color 0.2s ease-in-out;
+}
+
+#follow a:hover {
+  color: #000000;
+}
+
+/* Style for the about section */
+.about {
+  flex-basis: 20%;
+  text-align: left;
+  padding: 0 20px;
+  color:white;
+}
+
+.about a {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.about a:hover {
+  color: #000000;
+}
+
+/* Style for the myaccount section */
+.my-account {
+  flex-basis: 20%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+
+#footer .my-account a{
+  display: flex;
+  text-decoration: none;
+  color:white;
+  padding:5px;
 } 
+
+.my-account a:hover {
+  color: #000000;
+}
+
+/* Style for the payment section */
+.payment {
+  flex-basis: 20%;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.payment h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.payment p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Style for the copyright section */
+footer .copyright {
+  background-color: #e8e8e8;
+  color: #666666;
+  padding: 10px 0;
+  font-size: 12px;
+  text-align: center;
+}
+
 
