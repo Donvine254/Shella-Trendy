@@ -149,3 +149,18 @@ function handleSubscription() {
 }
 
 handleSubscription();
+//handle buying of items
+// let cartCount = 0;
+// function updateCart() {
+//   const badge = document.getElementsByClassName('badge')[0];
+//   cartCount = parseInt(badge.textContent);
+//   console.log(cartCount);
+//   const purchaseBtn = document.getElementById('purchase');
+//   purchaseBtn.addEventListener('click', () => {
+//     badge.textContent = cartCount + 1;
+//     cartCount++;
+//   });
+// }
+// updateCart();
+
+

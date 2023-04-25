@@ -374,7 +374,26 @@ h3 {
 #scroll-to-top.show {
   opacity: 1;
 }
-/* style alert box.let see if this works */
+/* style shopping cart demo */
+#nav #cart {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+#cart .cartname{
+  margin-left: 5px;
+  font-size: 20px;
+}
+#cart .badge {
+  position: absolute;
+  top: -15px;
+  right: 45px;
+  background-color: transparent;
+  color: inherit;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+}
 
 
 
