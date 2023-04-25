@@ -1,12 +1,10 @@
-
 body {
   background-color: rgb(29, 28, 28);
   color: white;
   font-size: larger;
   width: 100%;
   margin: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif ;
-  
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 * {
@@ -21,7 +19,7 @@ body {
   left: 0;
   right: 0;
   height: 80px;
-  background-color: #423B31;
+  background-color: #423b31;
   box-shadow: 0px 5px 10px rgba(143, 136, 136, 0.2);
   display: flex;
   justify-content: space-between;
@@ -62,7 +60,7 @@ body {
   background-color: inherit;
   border: none;
   outline: none;
-  color:white;
+  color: white;
 }
 
 .search-form button[type="submit"]:hover {
@@ -87,7 +85,7 @@ body {
 
 .navbar #nav li a {
   text-decoration: none;
-  color:white;
+  color: white;
   font-size: 20px;
   font-weight: bold;
   border-bottom: 2px solid transparent;
@@ -105,7 +103,7 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  background-color: #8F9779;
+  background-color: #8f9779;
 }
 
 .navbar #nav li#theme i {
@@ -118,14 +116,13 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: inherit;
-  height:50px;
-  color:inherit;
-  border:solid #ccc;
+  height: 50px;
+  color: inherit;
+  border: solid #ccc;
   border-left: none;
-  border-right:none;
-  border-top:none;
+  border-right: none;
+  border-top: none;
   box-shadow: 0px 5px 10px rgba(143, 136, 136, 0.2);
-
 }
 
 /* navigation styling */
@@ -157,7 +154,7 @@ body {
   background-color: inherit;
   border: 1px groove #363535;
   width: 100px;
-  font-size:20px;
+  font-size: 20px;
 }
 
 .dropdown-menu li {
@@ -165,7 +162,7 @@ body {
 }
 
 .dropdown-menu li a {
-  color:inherit;
+  color: inherit;
   text-decoration: none;
   font-size: 16px;
 }
@@ -191,14 +188,12 @@ body {
   margin-left: 20px;
 }
 .extras a {
-  color:inherit;
+  color: inherit;
   text-decoration: none;
   font-size: 20px;
 }
 
-
 /* styling for other body parts */
-
 
 /* styling for newsletter */
 
@@ -212,7 +207,7 @@ body {
 #newsletter .newstext {
   margin: 0;
   width: 100%;
-  color:white;
+  color: white;
 }
 
 #newsletter .newstext h4 {
@@ -243,7 +238,6 @@ body {
   width: 60%;
   height: 40px;
   font-size: 14px;
-
 }
 
 #newsletter button {
@@ -255,7 +249,6 @@ body {
   border-left: none;
   height: 40px;
   width: 150px;
-
 }
 
 #newsletter button:hover {
@@ -264,128 +257,71 @@ body {
 }
 /* styling for footer section */
 
-#footer {
-  background-color: #423B31;
-  color: white;
-  padding: 40px 0;
-  font-size: 14px;
-  text-align: center;
+#footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color:inherit;
+  color:inherit;
+  box-shadow: 0px 5px 10px rgba(143, 136, 136, 0.2);
+  bottom:0px;
+  left:0;
+  right:0;
+
 }
 
-/* Style for the div that contains the footer content */
-#footer > div {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Style for the contact section */
-.contact {
-  flex-basis: 30%;
-  text-align: left;
-  padding: 0 20px;
-}
-
-.contact h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.contact p {
+.footer {
+  padding-top: 10px;
   margin: 0;
-  line-height: 1.5;
+  padding: 0;
+  list-style: none;
 }
 
-/* Style for the follow section */
-#follow {
-  margin-top: 15px;
-}
-
-#follow h4 {
-  font-size: 16px;
-  font-weight: bold;
+.footer h4 {
   margin-bottom: 10px;
+  font-size: 20px;
 }
 
-#follow a {
-  display: inline-block;
+.footer p {
+  margin: 0;
+  padding: 0;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color:rgb(42, 42, 168)
+}
+.footer a:not(:last-child) {
   margin-right: 10px;
-  font-size: 24px;
-  color: white;
-  transition: color 0.2s ease-in-out;
-}
-
-#follow a:hover {
-  color: #000000;
-}
-
-/* Style for the about section */
-.about {
-  flex-basis: 20%;
-  text-align: left;
-  padding: 0 20px;
-  color:white;
-}
-
-.about a {
-  display: block;
-  margin-bottom: 10px;
-  color: white;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-.about a:hover {
-  color: #000000;
-}
-
-/* Style for the myaccount section */
-.my-account {
-  flex-basis: 20%;
-  text-align: center;
-  padding: 0 20px;
 }
 
 
-#footer .my-account a{
-  display: flex;
-  text-decoration: none;
-  color:white;
-  padding:5px;
-} 
-
-.my-account a:hover {
-  color: #000000;
-}
-
-/* Style for the payment section */
-.payment {
-  flex-basis: 20%;
-  text-align: left;
-  padding: 0 20px;
-}
-
-.payment h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.payment p {
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Style for the copyright section */
-footer .copyright {
-  background-color: #e8e8e8;
-  color: #666666;
-  padding: 10px 0;
-  font-size: 12px;
+#copyright {
+  bottom: 0;
+  left: 0;
+  width: 100%;
   text-align: center;
 }
+/* styling for scroll button */
+/* #scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color:inherit;
+  color:inherit;
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-
+#scroll-to-top.show {
+  opacity: 1;
+} */

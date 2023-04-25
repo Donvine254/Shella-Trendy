@@ -25,7 +25,7 @@ const body = document.body;
 
 themeIcon.addEventListener("click", function() {
   if (themeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-    body.style.backgroundColor = "#e9f5f9";
+    body.style.backgroundColor = "white";
     body.style.color = "black";
     body.classList.add("dark-theme");
     themeIcon.innerHTML = "<box-icon name='sun'></box-icon>";
@@ -76,3 +76,39 @@ searchForm.addEventListener('keydown', (event) => {
   }
 });
 ;
+//since the page can get larger, lets add an event listener for scroll that appends a button to return the user to the top
+function handleScroll() {
+  const footer = document.querySelector("#copyright");
+  const button = document.createElement("button");
+  button.innerHTML = "<box-icon type='solid' name='arrow-to-top'></box-icon>";
+  button.href = "#";
+  button.id = "scroll-to-top";
+  
+  footer.appendChild(button);
+
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    button.remove();
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > window.innerHeight / 1) {
+      button.classList.add("show");
+    } else {
+      button.classList.remove("show");
+    }
+    const isButtonAppended = Array.from(footer.children).includes(button);
+    if (!isButtonAppended && window.scrollY > 0) {
+      footer.appendChild(button);
+    }
+  });
+}
+
+handleScroll();
+
+
