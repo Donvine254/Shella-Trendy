@@ -19,13 +19,13 @@ dropdown.addEventListener('click', () => {
     dropdownMenu = null;
   }
 });
-//change webpage them from light to dark. I set the atributes to inherit but with time i can create custom themes
+//change webpage theme from light to dark. I set the atributes to inherit but with time i can create custom themes
 const themeIcon = document.getElementById("theme");
 const body = document.body;
 
 themeIcon.addEventListener("click", function() {
   if (themeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-    body.style.backgroundColor = "white";
+    body.style.backgroundColor = "#E3e6f3";
     body.style.color = "black";
     body.classList.add("dark-theme");
     themeIcon.innerHTML = "<box-icon name='sun'></box-icon>";
@@ -110,5 +110,33 @@ function handleScroll() {
 }
 
 handleScroll();
+//handle email subscription
+function handleSubscription() {
+  const input = document.getElementById('input');
+  const subscriptionButton = document.getElementById('subscription');
+  subscriptionButton.disabled = true; // disable the button by default
+  input.addEventListener('input', function() {
+    const email = input.value.trim(); 
+    if (email !== '' && validateEmail(email)) {
+      subscriptionButton.disabled = false; // enable the button if there's a valid email value
+      
+    } else {
+      subscriptionButton.disabled = true; // disable the button if the value is empty or invalid
+    }
+  });
+  subscriptionButton.addEventListener('click', function() {
+    const email = input.value.trim();
+    alert(`${email} has been successfully added to our mailing list`)
+    input.value=""
+  });
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // regular expression pattern for email validation
+    return regex.test(email);
+  }
+}
+
+handleSubscription();
+
+
 
 
