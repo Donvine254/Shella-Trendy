@@ -83,7 +83,7 @@ function handleScroll() {
   button.innerHTML = "<box-icon type='solid' name='arrow-to-top'></box-icon>";
   button.href = "#";
   button.id = "scroll-to-top";
-  
+  button.title="go to top"
   footer.appendChild(button);
 
   button.addEventListener("click", (event) => {

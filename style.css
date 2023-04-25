@@ -310,18 +310,16 @@ body {
   text-align: center;
 }
 /* styling for scroll button */
-/* #scroll-to-top {
+#scroll-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color:inherit;
-  color:inherit;
   padding: 10px;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
 #scroll-to-top.show {
-  opacity: 1;
-} */
+  opacity: 5;
+}
+
