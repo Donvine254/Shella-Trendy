@@ -163,7 +163,7 @@ async function fetchShoppingItems(){
       clothes=structuredClone(shopping.record.clothes)
       shoes=structuredClone(shopping.record.shoes)
       bags=structuredClone(shopping.record.bags)
-      renderClothes(clothes)
+      renderClothes(bags)
     }
     else {
       throw new Error("404, permission denied");
