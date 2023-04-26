@@ -29,10 +29,10 @@ function toggleThemes() {
 
   themeIcon.addEventListener("click", function () {
     if (themeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
-      body.style.backgroundColor = "#E3e6f3";
+      body.style.backgroundColor = "white";
       body.style.color = "black";
       body.classList.add("dark-theme");
-      footer.style.backgroundColor = "#E3E6F3";
+      footer.style.backgroundColor = "white";
       themeIcon.style.backgroundColor = "white";
       themeIcon.innerHTML =
         "<box-icon name='sun' animation='flashing' rotate='90'color='#D37506' ></box-icon>";
@@ -148,46 +148,103 @@ function handleSubscription() {
 }
 
 handleSubscription();
-//handle buying of items
+
+//fetch data from my API
+let shopping={}
+let clothes
+let shoes
+let bags
+
+async function fetchShoppingItems(){
+  try {
+    const response= await fetch(baseUrl)
+    if(response.ok){
+      const shopping= await response.json()
+      clothes=structuredClone(shopping.record.clothes)
+      shoes=structuredClone(shopping.record.shoes)
+      bags=structuredClone(shopping.record.bags)
+      renderClothes(clothes)
+    }
+    else {
+      throw new Error("404, permission denied");
+    }
+  } catch (error) {
+    console.error(error)
+  }
+addToWishList();
+updateCart()
+}
+fetchShoppingItems()
+//structured clone reduces time and space complexity associated with looping but is not fully supported by all browsers, especially on ios and android devices
+
+const productsSection = document.getElementById('products');
+function renderClothes(clothes){
+  for (const cloth of clothes) {
+    const product=document.createElement("div")
+    product.classList.add("product")
+    product.innerHTML=`<box-icon class="favorite"color="gold" name='heart'></box-icon>
+    <img src="${cloth.image}" alt="product" srcset="">
+    <p id="title">${cloth.name}</p>
+    <p id="price"><strong>Ksh:</strong>${cloth.price}</p>
+    <p id="ratings"><box-icon type="solid" color="gold" name='star'></box-icon>
+      <box-icon type='solid'color="gold" name='star'></box-icon>
+      <box-icon type='solid'color="gold" name='star'></box-icon>
+      <box-icon type='solid'color="gold" name='star'></box-icon>
+      <box-icon type='solid'color="gold" name='star'></box-icon>
+      (${cloth.ratings})</p>
+    <button type="button" class="purchase"><box-icon id="cart" name='cart-add'color='white' ></box-icon><span>Add to Cart</span></button>`
+    productsSection.appendChild(product)
+  }
+ 
+}
+
+
+// handle buying of items
 let cartCount = 0;
+
 function updateCart() {
   const badge = document.getElementsByClassName("badge")[0];
   cartCount = parseInt(badge.textContent);
-  console.log(cartCount);
-  const purchaseBtn = document.getElementsByClassName("purchase")[0];
-  purchaseBtn.addEventListener("click", () => {
-    badge.textContent = cartCount + 1;
-    cartCount++;
+  const purchaseBtns = document.querySelectorAll(".purchase");
+  purchaseBtns.forEach((purchaseBtn) => {
+    purchaseBtn.addEventListener("click", () => {
+      badge.textContent = cartCount + 1;
+      cartCount++;
+    });
   });
 }
-updateCart()
 
-//lets handle the love button to enable users add products to the wishlist
+
+
+// lets handle the love button to enable users add products to the wishlist
 function addToWishList() {
-  const like = document.getElementById("favorite");
+  const like = document.querySelectorAll(".favorite");
   let isLiked = false;
-  like.addEventListener("click", function() {
-    if (!isLiked) {
-      like.setAttribute("type", "solid");
-      like.setAttribute("color", "red");
-      isLiked = true;
-      alert(`This item has been added to your wishlist`);
-    } else {
-      like.removeAttribute("type");
-      like.setAttribute("color", "yellow");
-      like.setAttribute("name","heart")
-      isLiked = false;
-      alert(`This item has been removed from your wishlist`);
-    }
-  });
-  like.addEventListener("mouseover", function() {
-    like.style.transform = "scale(1.5)";
-    like.setAttribute("animation","burst")
-  });
-  like.addEventListener("mouseout", function() {
-    like.style.transform = "scale(1)";
-    like.removeAttribute("animation")
+  like.forEach(function(item) {
+    item.addEventListener("click", function() {
+      if (!isLiked) {
+        item.setAttribute("type", "solid");
+        item.setAttribute("color", "red");
+        isLiked = true;
+        alert(`This item has been added to your wishlist`);
+      } else {
+        item.removeAttribute("type");
+        item.setAttribute("color", "yellow");
+        item.setAttribute("name", "heart");
+        isLiked = false;
+        alert(`This item has been removed from your wishlist`);
+      }
+    });
+    item.addEventListener("mouseover", function() {
+      item.style.transform = "scale(1.5)";
+      item.setAttribute("animation", "burst");
+    });
+    item.addEventListener("mouseout", function() {
+      item.style.transform = "scale(1)";
+      item.removeAttribute("animation");
+    });
   });
 }
 
-addToWishList();
+
+
