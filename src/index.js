@@ -1,4 +1,4 @@
-const baseUrl = "https://my-json-server.typicode.com/Donvine254/Shella-Trendy";
+const baseUrl = "https://api.jsonbin.io/v3/b/644896228e4aa6225e910b8f";
 
 //append a menu and remove a menu after clicking on the categories
 const menu = document.querySelector(".menu");
