@@ -1,6 +1,4 @@
-const baseUrl="https://my-json-server.typicode.com/Donvine254/Shella-Trendy"
-
-
+const baseUrl = "https://my-json-server.typicode.com/Donvine254/Shella-Trendy";
 
 //append a menu and remove a menu after clicking on the categories
 const menu = document.querySelector(".menu");
@@ -35,13 +33,14 @@ function toggleThemes() {
       body.style.color = "black";
       body.classList.add("dark-theme");
       footer.style.backgroundColor = "#E3E6F3";
-      themeIcon.style.backgroundColor="white";
-      themeIcon.innerHTML = "<box-icon name='sun' animation='flashing' rotate='90'color='#D37506' ></box-icon>";
+      themeIcon.style.backgroundColor = "white";
+      themeIcon.innerHTML =
+        "<box-icon name='sun' animation='flashing' rotate='90'color='#D37506' ></box-icon>";
     } else {
       body.style.backgroundColor = "";
       body.style.color = "";
       footer.style.backgroundColor = "#423B31";
-      themeIcon.style.backgroundColor="#8f9779"
+      themeIcon.style.backgroundColor = "#8f9779";
       body.classList.remove("dark-theme");
       themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
@@ -89,7 +88,7 @@ function search() {
     }
   });
 }
-search()
+search();
 //since the page can get larger, lets add an event listener for scroll that appends a button to return the user to the top
 function handleScroll() {
   const footer = document.querySelector("#copyright");
@@ -150,17 +149,45 @@ function handleSubscription() {
 
 handleSubscription();
 //handle buying of items
-// let cartCount = 0;
-// function updateCart() {
-//   const badge = document.getElementsByClassName('badge')[0];
-//   cartCount = parseInt(badge.textContent);
-//   console.log(cartCount);
-//   const purchaseBtn = document.getElementById('purchase');
-//   purchaseBtn.addEventListener('click', () => {
-//     badge.textContent = cartCount + 1;
-//     cartCount++;
-//   });
-// }
-// updateCart();
+let cartCount = 0;
+function updateCart() {
+  const badge = document.getElementsByClassName("badge")[0];
+  cartCount = parseInt(badge.textContent);
+  console.log(cartCount);
+  const purchaseBtn = document.getElementsByClassName("purchase")[0];
+  purchaseBtn.addEventListener("click", () => {
+    badge.textContent = cartCount + 1;
+    cartCount++;
+  });
+}
+updateCart()
 
+//lets handle the love button to enable users add products to the wishlist
+function addToWishList() {
+  const like = document.getElementById("favorite");
+  let isLiked = false;
+  like.addEventListener("click", function() {
+    if (!isLiked) {
+      like.setAttribute("type", "solid");
+      like.setAttribute("color", "red");
+      isLiked = true;
+      alert(`This item has been added to your wishlist`);
+    } else {
+      like.removeAttribute("type");
+      like.setAttribute("color", "yellow");
+      like.setAttribute("name","heart")
+      isLiked = false;
+      alert(`This item has been removed from your wishlist`);
+    }
+  });
+  like.addEventListener("mouseover", function() {
+    like.style.transform = "scale(1.5)";
+    like.setAttribute("animation","burst")
+  });
+  like.addEventListener("mouseout", function() {
+    like.style.transform = "scale(1)";
+    like.removeAttribute("animation")
+  });
+}
 
+addToWishList();
