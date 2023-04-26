@@ -86,7 +86,7 @@
         "id": 1,
         "name": "Bata White Unisex Bullets",
         "price": 899,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Bata%20White%20Unisex%20.png?raw=true",
         "ratings":"4.9",
         "description": "If you are looking for stylish products that last longer, look no further than BATA. This renowned brand produces very high quality products while catering to style comfort and global trends "
       },
@@ -94,7 +94,7 @@
         "id": 2,
         "name": "Fashion Ladies Fashion Flat-Bottom Breathable Casual Sneakers",
         "price": 4000,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/fashion%20ladies%20casual%20breathable%20sneakers.png?raw=true",
         "ratings":"5",
         "description": "Unique design, simple fashion, breathable and comfortable sneakers, let your feet get the greatest liberation, and enjoy a cool and comfortable moment."
       },
@@ -102,7 +102,7 @@
         "id": 3,
         "name": "Fashion Ladies Sneaker Shoes Causal",
         "price": 1500,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/fashion_ladies_casual_white.png?raw=true",
         "ratings":"4.8",
         "description": "These fashion ladies' sneakers are a trendy and casual shoe option that are perfect for everyday wear during the spring, summer, and autumn seasons. The upper material is made of PUMaterial, which provides a comfortable and breathable fit, and the midsole and outsole are made of durable rubber material"
       },
@@ -110,7 +110,7 @@
         "id": 4,
         "name": "Fashion Mens Sneakers Shoes",
         "price": 1500,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Mens%20Sneakers%20Shoes.png?raw=true",
         "ratings":"4.9",
         "description": "These men's fashion sneakers are a stylish and comfortable shoe option that are suitable for daily wear or sports activities. The shoe features a front lace-up wearing style and a flat heel shape with a low heel height (1-3cm). The upper material is made of high-quality mesh, while the sole is made of durable rubber material with injection shoes technology. "
       },
@@ -118,7 +118,7 @@
         "id": 5,
         "name": "Waanzilish Ladies Sneakers Pink ",
         "price": 799,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashio%20Pink%20Ladies%20Sneakers.png?raw=true",
         "ratings":"4.7",
         "description": "These Waanzilish ladies sneakers are perfect for running and sports activities with their breathable pink mesh upper, durable PVC outsole, and comfortable EVA midsole. These high-quality and light shoes are also fashionable and feature cotton fabric lining for added comfort."
       },
@@ -126,7 +126,7 @@
         "id": 6,
         "name": "Fashion Quality Classy Ladies Sneakers -Pink",
         "price": 2300,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Quality%20Classy%20Ladies%20Sneakers%20-Pink.png?raw=true",
         "ratings":"5",
         "description": "These Fashion classy ladies sneakers are designed to survive the test of time and keep your feet comfortable"
       },
@@ -134,7 +134,7 @@
         "id": 7,
         "name": "Fashion Slipon Shoes Loafers",
         "price": 799,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Slipon%20Shoes%20Loafers%20.png?raw=true",
         "ratings":"4.8",
         "description": "These fashion slip-on shoes are perfect for casual wear, walking, and outdoor activities. They feature a black stretch fabric and canvas upper, rubber outsole, and comfortable PVC midsole. Available in sizes 41-44, these shoes also feature anti-slip technology and stylish canvas shoe laces."
       },
@@ -142,7 +142,7 @@
         "id": 8,
         "name": "Fashion Women's Shoes Sandals Frosted Middle Heel",
         "price": 850,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Women's%20Shoes%20Sandals%20Frosted%20Middle.png?raw=true",
         "ratings":"4.6",
         "description": "These heeled sandals are both stylish and practical, providing a cool effect while flattering your figure. The solid color block heel design allows for comfortable and steady walking, making them suitable for a variety of occasions"
       },
@@ -150,7 +150,7 @@
         "id": 9,
         "name": "Women Pointed Ankle Strap With Pendant Hunky",
         "price":2500,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Generic%20Spring%20Summer%20Women%20Pointed%20Ankle%20Strap.png?raw=true",
         "ratings":"",
         "description": "These pointed ankle strap hells come with anti-slip sole and wear-resistant design."
        
@@ -159,7 +159,7 @@
         "id": 10,
         "name": "Waanzilish Mens Sneakers Shoes",
         "price": 1099,
-        "image":"",
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Waanzilish%20Men%20S%20Sneakers%20Shoes-fotor-bg.png?raw=true",
         "ratings":"4.7",
         "description": "These Waanzilish men's sneakers are perfect for spring and autumn with their breathable and hard-wearing PU upper, rubber midsole and outsole, and fashionable blue color. Available in sizes 39-44, these shoes are ideal for both casual wear and sports activities"
       }  ],
