@@ -2,37 +2,32 @@ const baseUrl = "https://api.jsonbin.io/v3/b/644896228e4aa6225e910b8f";
 const menu = document.querySelector(".menu");
 const dropdown = document.querySelector(".dropdown");
 const body = document.body;
+let item
+let itemObject = { [item]: item };
 //append a menu and remove a menu after clicking on the categories
-document.addEventListener("DOMContentLoaded", function (event) {
+function addDropDown() {
   let dropdownMenu = null;
-
-  // Hide the dropdown menu by default
-  dropdownMenu = document.createElement("ul");
-  dropdownMenu.classList.add("dropdown-menu", "menuHidden");
-  dropdownMenu.innerHTML = `
-    <li><a href="#">Bags</a></li>
-    <li><a href="#">Clothes</a></li>
-    <li><a href="#">Shoes</a></li>
-  `;
-  dropdownMenu.style.zIndex = 9999;
-  menu.appendChild(dropdownMenu);
-
-  dropdown.addEventListener("click", () => {
-    if (dropdownMenu.classList.contains("menuHidden")) {
-      dropdownMenu.classList.remove("menuHidden");
-    } else {
-      dropdownMenu.classList.add("menuHidden");
-    }
-  });
-});
-
-function handleMenu() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const dropdownMenu = document.querySelector(".dropdown-menu");
-    console.log(dropdownMenu);
+  document.addEventListener("DOMContentLoaded", function (event) {
+    // Hide the dropdown menu by default
+    dropdownMenu = document.createElement("ul");
+    dropdownMenu.classList.add("dropdown-menu", "menuHidden");
+    dropdownMenu.innerHTML = `
+      <li><a href="#">Bags</a></li>
+      <li><a href="#">Clothes</a></li>
+      <li><a href="#">Shoes</a></li>
+    `;
+    dropdownMenu.style.zIndex = 9999;
+    menu.appendChild(dropdownMenu);
+    dropdown.addEventListener("click", () => {
+      if (dropdownMenu.classList.contains("menuHidden")) {
+        dropdownMenu.classList.remove("menuHidden");
+      } else {
+        dropdownMenu.classList.add("menuHidden");
+      }
+    });
   });
 }
-handleMenu();
+addDropDown()
 
 //change webpage theme from light to dark. I set the atributes to inherit but with time i can create custom themes
 function toggleThemes() {
@@ -164,6 +159,7 @@ handleSubscription();
 
 //fetch data from my API
 let shopping = {};
+let shoppingItems;
 let clothes;
 let shoes;
 let bags;
@@ -173,10 +169,11 @@ async function fetchShoppingItems() {
     const response = await fetch(baseUrl);
     if (response.ok) {
       const shopping = await response.json();
-      clothes = structuredClone(shopping.record.clothes);
-      shoes = structuredClone(shopping.record.shoes);
-      bags = structuredClone(shopping.record.bags);
-      renderClothes(bags);
+      shoppingItems=structuredClone(shopping.record)
+      clothes = await structuredClone(shoppingItems.clothes);
+      shoes = await structuredClone(shoppingItems.shoes);
+      bags = await structuredClone(shoppingItems.bags);
+      renderClothes(clothes)
     } else {
       throw new Error("404, permission denied");
     }
@@ -188,8 +185,19 @@ async function fetchShoppingItems() {
 }
 fetchShoppingItems();
 //structured clone reduces time and space complexity associated with looping but is not fully supported by all browsers, especially on ios and android devices
-
+//updateTheMenu
+function handleMenu() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    dropdownMenu.addEventListener("click",(event)=>{
+      item=event.target.textContent
+      console.log(item)
+    })
+  });
+}
+handleMenu()
 const productsSection = document.getElementById("products");
+
 function renderClothes(clothes) {
   for (const cloth of clothes) {
     const product = document.createElement("div");
