@@ -185,17 +185,6 @@ async function fetchShoppingItems() {
 }
 fetchShoppingItems();
 //structured clone reduces time and space complexity associated with looping but is not fully supported by all browsers, especially on ios and android devices
-//updateTheMenu
-function handleMenu() {
-  document.addEventListener("DOMContentLoaded", () => {
-    const dropdownMenu = document.querySelector(".dropdown-menu");
-    dropdownMenu.addEventListener("click",(event)=>{
-      item=event.target.textContent
-      console.log(item)
-    })
-  });
-}
-handleMenu()
 const productsSection = document.getElementById("products");
 
 function renderClothes(clothes) {
