@@ -173,7 +173,7 @@ async function fetchShoppingItems() {
       clothes = await structuredClone(shoppingItems.clothes);
       shoes = await structuredClone(shoppingItems.shoes);
       bags = await structuredClone(shoppingItems.bags);
-      renderClothes(clothes);
+      renderClothes(bags);
     } else {
       throw new Error("404, permission denied");
     }

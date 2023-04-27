@@ -273,6 +273,7 @@ body {
 .featuredproducts h1 {
   text-align: center;
   font-size: 24px;
+  color:inherit;
 }
 #products {
   display: grid;
