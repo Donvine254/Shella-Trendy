@@ -254,3 +254,59 @@ function addToWishList() {
     });
   });
 }
+// Add Pop-up chatbutton
+const chatButton = document.getElementById("chat-button");
+
+chatButton.addEventListener("click", () => {
+  const chatBoxContainer = document.createElement("section");
+  chatBoxContainer.id = "chatbox-container";
+  const chatBox = document.createElement("div");
+  chatBox.innerHTML = ` <div id="topheader">
+    <h1>Let's Chat? We are online 24/7<box-icon id="remove" name='x' ></box-icon></h1>
+  </div>
+  <div id="chatbox">
+    <div id="chatlog"></div>
+    <div class="input-wrapper">
+      <input id="userInput" placeholder="Type your message here..." maxlength="250">
+      <box-icon id="chat" type='solid' name='send'>Send</box-icon>
+    </div>`;
+  const footer = document.getElementById("copyright")
+  footer.append(chatBoxContainer);
+  chatBoxContainer.appendChild(chatBox);
+  chatButton.classList.add("btnHidden");
+  const removeBtn = document.getElementById("remove");
+  console.log(removeBtn);
+  sendUserMessage();
+  removeBtn.addEventListener("click", () => {
+    footer.removeChild(chatBoxContainer);
+    chatButton.classList.remove("btnHidden");
+    chatButton.classList.add("btnActive");
+  });
+});
+
+function sendUserMessage() {
+  const userBtn = document.getElementById("chat");
+  const userInput = document.getElementById("userInput");
+  const chatArea = document.getElementById("chatlog");
+  if (!userBtn || !userInput || !chatArea) {
+    return;
+  }
+  userBtn.addEventListener("click", () => {
+    let userMessage = "<div class='userMessage'>" + userInput.value + "</div>";
+    chatArea.innerHTML += userMessage;
+    userInput.value=""
+  });
+  setTimeout(sendSupportMessage,2000)
+}
+
+function sendSupportMessage(){
+  const chatArea = document.getElementById("chatlog")
+  const userBtn = document.getElementById("chat");
+  if (!userBtn || !chatArea) {
+    return;
+  }
+  const supportMessage="<div class='supportMessage'>Thanks for your message! Our support team will get back to you shortly.</div>";
+  userBtn.addEventListener("click", () => {
+    chatArea.innerHTML += supportMessage;
+  });
+}
