@@ -1,30 +1,42 @@
 const baseUrl = "https://api.jsonbin.io/v3/b/644896228e4aa6225e910b8f";
-
-//append a menu and remove a menu after clicking on the categories
 const menu = document.querySelector(".menu");
 const dropdown = document.querySelector(".dropdown");
-let dropdownMenu = null;
+const body = document.body;
+//append a menu and remove a menu after clicking on the categories
+document.addEventListener("DOMContentLoaded", function (event) {
+  let dropdownMenu = null;
 
-dropdown.addEventListener("click", () => {
-  if (!dropdownMenu) {
-    dropdownMenu = document.createElement("ul");
-    dropdownMenu.classList.add("dropdown-menu");
-    dropdownMenu.innerHTML = `
-      <li><a href="#">Bags</a></li>
-      <li><a href="#">Clothes</a></li>
-      <li><a href="#">Shoes</a></li>
-    `;
-    dropdownMenu.style.zIndex = 9999;
-    menu.appendChild(dropdownMenu);
-  } else {
-    menu.removeChild(dropdownMenu);
-    dropdownMenu = null;
-  }
+  // Hide the dropdown menu by default
+  dropdownMenu = document.createElement("ul");
+  dropdownMenu.classList.add("dropdown-menu", "menuHidden");
+  dropdownMenu.innerHTML = `
+    <li><a href="#">Bags</a></li>
+    <li><a href="#">Clothes</a></li>
+    <li><a href="#">Shoes</a></li>
+  `;
+  dropdownMenu.style.zIndex = 9999;
+  menu.appendChild(dropdownMenu);
+
+  dropdown.addEventListener("click", () => {
+    if (dropdownMenu.classList.contains("menuHidden")) {
+      dropdownMenu.classList.remove("menuHidden");
+    } else {
+      dropdownMenu.classList.add("menuHidden");
+    }
+  });
 });
+
+function handleMenu() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    console.log(dropdownMenu);
+  });
+}
+handleMenu();
+
 //change webpage theme from light to dark. I set the atributes to inherit but with time i can create custom themes
 function toggleThemes() {
   const themeIcon = document.getElementById("theme");
-  const body = document.body;
   const footer = document.querySelector("#footer-wrapper");
 
   themeIcon.addEventListener("click", function () {
@@ -73,8 +85,9 @@ function search() {
 
     removeButton.addEventListener("click", () => {
       searchResults.removeChild(searchResultElement);
+      body.removeChild(searchResults);
     });
-
+    body.appendChild(searchResults);
     searchResultElement.appendChild(removeButton);
     searchResults.appendChild(searchResultElement);
 
@@ -150,39 +163,38 @@ function handleSubscription() {
 handleSubscription();
 
 //fetch data from my API
-let shopping={}
-let clothes
-let shoes
-let bags
+let shopping = {};
+let clothes;
+let shoes;
+let bags;
 
-async function fetchShoppingItems(){
+async function fetchShoppingItems() {
   try {
-    const response= await fetch(baseUrl)
-    if(response.ok){
-      const shopping= await response.json()
-      clothes=structuredClone(shopping.record.clothes)
-      shoes=structuredClone(shopping.record.shoes)
-      bags=structuredClone(shopping.record.bags)
-      renderClothes(bags)
-    }
-    else {
+    const response = await fetch(baseUrl);
+    if (response.ok) {
+      const shopping = await response.json();
+      clothes = structuredClone(shopping.record.clothes);
+      shoes = structuredClone(shopping.record.shoes);
+      bags = structuredClone(shopping.record.bags);
+      renderClothes(bags);
+    } else {
       throw new Error("404, permission denied");
     }
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-addToWishList();
-updateCart()
+  addToWishList();
+  updateCart();
 }
-fetchShoppingItems()
+fetchShoppingItems();
 //structured clone reduces time and space complexity associated with looping but is not fully supported by all browsers, especially on ios and android devices
 
-const productsSection = document.getElementById('products');
-function renderClothes(clothes){
+const productsSection = document.getElementById("products");
+function renderClothes(clothes) {
   for (const cloth of clothes) {
-    const product=document.createElement("div")
-    product.classList.add("product")
-    product.innerHTML=`<box-icon class="favorite"color="gold" name='heart'></box-icon>
+    const product = document.createElement("div");
+    product.classList.add("product");
+    product.innerHTML = `<box-icon class="favorite"color="gold" name='heart'></box-icon>
     <img src="${cloth.image}" alt="product" srcset="">
     <p id="title">${cloth.name}</p>
     <p id="price"><strong>Ksh:</strong>${cloth.price}</p>
@@ -192,12 +204,10 @@ function renderClothes(clothes){
       <box-icon type='solid'color="gold" name='star'></box-icon>
       <box-icon type='solid'color="gold" name='star'></box-icon>
       (${cloth.ratings})</p>
-    <button type="button" class="purchase"><box-icon id="cart" name='cart-add'color='white' ></box-icon><span>Add to Cart</span></button>`
-    productsSection.appendChild(product)
+    <button type="button" class="purchase"><box-icon id="cart" name='cart-add'color='white' ></box-icon><span>Add to Cart</span></button>`;
+    productsSection.appendChild(product);
   }
- 
 }
-
 
 // handle buying of items
 let cartCount = 0;
@@ -214,14 +224,12 @@ function updateCart() {
   });
 }
 
-
-
 // lets handle the love button to enable users add products to the wishlist
 function addToWishList() {
   const like = document.querySelectorAll(".favorite");
   let isLiked = false;
-  like.forEach(function(item) {
-    item.addEventListener("click", function() {
+  like.forEach(function (item) {
+    item.addEventListener("click", function () {
       if (!isLiked) {
         item.setAttribute("type", "solid");
         item.setAttribute("color", "red");
@@ -235,16 +243,13 @@ function addToWishList() {
         alert(`This item has been removed from your wishlist`);
       }
     });
-    item.addEventListener("mouseover", function() {
+    item.addEventListener("mouseover", function () {
       item.style.transform = "scale(1.5)";
       item.setAttribute("animation", "burst");
     });
-    item.addEventListener("mouseout", function() {
+    item.addEventListener("mouseout", function () {
       item.style.transform = "scale(1)";
       item.removeAttribute("animation");
     });
   });
 }
-
-
-
