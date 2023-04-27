@@ -3,7 +3,6 @@ const menu = document.querySelector(".menu");
 const dropdown = document.querySelector(".dropdown");
 const body = document.body;
 let item;
-let itemObject = { [item]: item };
 //append a menu and remove a menu after clicking on the categories
 function addDropDown() {
   let dropdownMenu = null;
@@ -12,7 +11,7 @@ function addDropDown() {
     dropdownMenu = document.createElement("ul");
     dropdownMenu.classList.add("dropdown-menu", "menuHidden");
     dropdownMenu.innerHTML = `
-      <li><a href="#">Bags</a></li>
+      <li><a href="#Bags">Bags</a></li>
       <li><a href="#">Clothes</a></li>
       <li><a href="#">Shoes</a></li>
     `;
@@ -173,7 +172,7 @@ async function fetchShoppingItems() {
       clothes = await structuredClone(shoppingItems.clothes);
       shoes = await structuredClone(shoppingItems.shoes);
       bags = await structuredClone(shoppingItems.bags);
-      renderClothes(bags);
+      renderItems(bags,shoes,clothes);
     } else {
       throw new Error("404, permission denied");
     }
@@ -187,20 +186,21 @@ fetchShoppingItems();
 //structured clone reduces time and space complexity associated with looping but is not fully supported by all browsers, especially on ios and android devices
 const productsSection = document.getElementById("products");
 
-function renderClothes(clothes) {
-  for (const cloth of clothes) {
+function renderItems(bags,clothes,shoes) {
+  allProducts = [...bags, ...clothes, ...shoes]
+  for (const item of allProducts) {
     const product = document.createElement("div");
     product.classList.add("product");
     product.innerHTML = `<box-icon class="favorite"color="gold" name='heart'></box-icon>
-    <img src="${cloth.image}" alt="product" srcset="">
-    <p id="title">${cloth.name}</p>
-    <p id="price"><strong>Ksh:</strong>${cloth.price}</p>
+    <img src="${item.image}" alt="product" srcset="">
+    <p id="title">${item.name}</p>
+    <p id="price"><strong>Ksh:</strong>${item.price}</p>
     <p id="ratings"><box-icon type="solid" color="gold" name='star'></box-icon>
       <box-icon type='solid'color="gold" name='star'></box-icon>
       <box-icon type='solid'color="gold" name='star'></box-icon>
       <box-icon type='solid'color="gold" name='star'></box-icon>
       <box-icon type='solid'color="gold" name='star'></box-icon>
-      (${cloth.ratings})</p>
+      (${item.ratings})</p>
     <button type="button" class="purchase"><box-icon id="cart" name='cart-add'color='white' ></box-icon><span>Add to Cart</span></button>`;
     productsSection.appendChild(product);
   }

@@ -181,13 +181,14 @@ body {
 .search-results {
   position: absolute;
   top: 150px;
-  left: 150px;
+  left: 100px;
   justify-content: center;
   align-items: center;
   border: 1px solid#3874ff;
   padding: 10px;
   border-radius: 5px;
   z-index: 999;
+  width: 50%;
 }
 .search-results button {
   display: inline-block;
@@ -636,6 +637,7 @@ h1 {
 .userMessage {
   width: 75%;
   background-color: #0d2e74;
+  color:white;
   padding: 5px;
   margin-bottom: 5px;
   border-radius: 5px;
