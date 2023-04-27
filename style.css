@@ -480,10 +480,14 @@ body {
   font-size: 20px;
 }
 #cart .badge {
+ display: none;
+}
+#cart .active{
+  background-color: #3874ff;
   position: absolute;
   top: -15px;
   right: 45px;
-  background-color: transparent;
+  /* background-color: transparent; */
   color: inherit;
   border-radius: 50%;
   padding: 5px;

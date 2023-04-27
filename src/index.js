@@ -2,7 +2,7 @@ const baseUrl = "https://api.jsonbin.io/v3/b/644896228e4aa6225e910b8f";
 const menu = document.querySelector(".menu");
 const dropdown = document.querySelector(".dropdown");
 const body = document.body;
-let item
+let item;
 let itemObject = { [item]: item };
 //append a menu and remove a menu after clicking on the categories
 function addDropDown() {
@@ -27,7 +27,7 @@ function addDropDown() {
     });
   });
 }
-addDropDown()
+addDropDown();
 
 //change webpage theme from light to dark. I set the atributes to inherit but with time i can create custom themes
 function toggleThemes() {
@@ -169,11 +169,11 @@ async function fetchShoppingItems() {
     const response = await fetch(baseUrl);
     if (response.ok) {
       const shopping = await response.json();
-      shoppingItems=structuredClone(shopping.record)
+      shoppingItems = structuredClone(shopping.record);
       clothes = await structuredClone(shoppingItems.clothes);
       shoes = await structuredClone(shoppingItems.shoes);
       bags = await structuredClone(shoppingItems.bags);
-      renderClothes(clothes)
+      renderClothes(clothes);
     } else {
       throw new Error("404, permission denied");
     }
@@ -215,8 +215,12 @@ function updateCart() {
   const purchaseBtns = document.querySelectorAll(".purchase");
   purchaseBtns.forEach((purchaseBtn) => {
     purchaseBtn.addEventListener("click", () => {
-      badge.textContent = cartCount + 1;
       cartCount++;
+      badge.textContent = cartCount;
+      if (cartCount > 0) {
+        badge.classList.remove("badge")
+        badge.classList.add("active");
+      }
     });
   });
 }
