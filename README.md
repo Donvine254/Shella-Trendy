@@ -1,6 +1,7 @@
 <h1>Shella Trendy</h1>
 <h2>Description<h2>
-Shella Trendy is an e-commerce website that allows users to shop for shoes, bags, and clothes. The website features a variety of products for both men and women, and includes a search functionality and screen to top button for easier navigation. The website also includes a "Let's Chat" button that connects users to customer support chat agents.
+Shella Trendy is an e-commerce website that allows users to shop for shoes, bags, and clothes.
+The website is designed to make it easier for the business to operate online without relying on third-party websites such as Facebook Marketplace that are full of scammers. The website wil provide consumers with easier access to our products and optimize visibility through SEO. Shella trendy website features a variety of products for both men and women that are fetched from the company public API, and includes a search functionality, add to cart, add to wishlist, subscribe to newsletter section and screen to top button for easier navigation. The website also includes a "Let's Chat" button that connects users to customer support chat agents and makes the website lively and responsive to user interactions.
 
 <h2>Setup<h2>
 To run the website locally, follow these steps:
@@ -9,7 +10,7 @@ To run the website locally, follow these steps:
 git clone https://github.com/Donvine254/Shella-Trendy.git
 2. Cd to the clone site
 3. Open the index.html file in your web browser
-#Technology Used
+  <h2>Technology Used</h2>
 The website was built using HTML, CSS, and JavaScript.
 
   <h2>Live Site</h2>
