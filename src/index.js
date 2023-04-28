@@ -262,7 +262,7 @@ chatButton.addEventListener("click", () => {
   chatBoxContainer.id = "chatbox-container";
   const chatBox = document.createElement("div");
   chatBox.innerHTML = ` <div id="topheader">
-    <h1>Let's Chat? We are online 24/7<box-icon id="remove" name='x' ></box-icon></h1>
+    <h1>Let's Chat? We are online 24/7<box-icon id="remove" color="white" name='x' ></box-icon></h1>
   </div>
   <div id="chatbox">
     <div id="chatlog"></div>
