@@ -192,7 +192,7 @@ function renderItems(bags,clothes,shoes) {
     const product = document.createElement("div");
     product.classList.add("product");
     product.innerHTML = `<box-icon class="favorite"color="gold" name='heart'></box-icon>
-    <img src="${item.image}" alt="product" srcset="">
+    <img src="${item.image}" alt="product"loading="lazy" srcset="">
     <p id="title">${item.name}</p>
     <p id="price"><strong>Ksh:</strong>${item.price}</p>
     <p id="ratings"><box-icon type="solid" color="gold" name='star'></box-icon>

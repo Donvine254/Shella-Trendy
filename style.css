@@ -11,6 +11,7 @@ body {
   margin: 0 0 0 2px;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 #header {
@@ -179,12 +180,12 @@ body {
 }
 /* Styling for the search results */
 .search-results {
-  position: absolute;
+  position: fixed;
   top: 150px;
   left: 100px;
   justify-content: center;
   align-items: center;
-  border: 1px solid#3874ff;
+  border: 1px transparent;
   padding: 10px;
   border-radius: 5px;
   z-index: 999;
