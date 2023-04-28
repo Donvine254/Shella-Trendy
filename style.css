@@ -664,4 +664,5 @@ h1 {
   float: right;
   clear: both;
   text-align: left;
+  /* arrange this to avoid horizontal scrollbar when the message grows */
 }
