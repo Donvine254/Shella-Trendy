@@ -18,7 +18,6 @@ The live site can be accessed at the following link: https://donvine254.github.i
 
 <h2>API</h2>
 The website uses the following API: https://api.jsonbin.io/v3/b/644896228e4aa6225e910b8f
-  Sure, here's an example of license information that you can include in your README file:
 
   <h2>License</h2>
 
@@ -28,7 +27,7 @@ This software is licensed under the [MIT License](https://opensource.org/license
 - The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
 - In no event shall the authors or copyright holders be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
 
-  <h3>Copyright (c) [year] Shella Trendy Limited. All rights reserved.</h3>
+  <h3>Copyright (c) 2023 Shella Trendy Limited. All rights reserved.</h3>
 
 In addition to the license terms, we also want to make sure that our users understand their rights of use and our policies on privacy and data collection. 
 
