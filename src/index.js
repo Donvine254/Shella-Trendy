@@ -28,7 +28,7 @@ function addDropDown() {
 }
 addDropDown();
 
-//change webpage theme from light to dark. I set the atributes to inherit but with time i can create custom themes
+//change webpage theme from light to dark. I set the attributes to inherit but with time i can create custom themes
 function toggleThemes() {
   const themeIcon = document.getElementById("theme");
   const footer = document.querySelector("#footer-wrapper");
