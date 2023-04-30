@@ -172,7 +172,7 @@ async function fetchShoppingItems() {
       clothes = await structuredClone(shoppingItems.clothes);
       shoes = await structuredClone(shoppingItems.shoes);
       bags = await structuredClone(shoppingItems.bags);
-      renderItems(bags,shoes,clothes);
+      renderItems(bags, shoes, clothes);
     } else {
       throw new Error("404, permission denied");
     }
@@ -186,8 +186,8 @@ fetchShoppingItems();
 //structured clone reduces time and space complexity associated with looping but is not fully supported by all browsers, especially on ios and android devices
 const productsSection = document.getElementById("products");
 
-function renderItems(bags,clothes,shoes) {
-  allProducts = [...bags, ...clothes, ...shoes]
+function renderItems(bags, clothes, shoes) {
+  allProducts = [...bags, ...clothes, ...shoes];
   for (const item of allProducts) {
     const product = document.createElement("div");
     product.classList.add("product");
@@ -218,7 +218,7 @@ function updateCart() {
       cartCount++;
       badge.textContent = cartCount;
       if (cartCount > 0) {
-        badge.classList.remove("badge")
+        badge.classList.remove("badge");
         badge.classList.add("active");
       }
     });
@@ -270,7 +270,7 @@ chatButton.addEventListener("click", () => {
       <input id="userInput" placeholder="Type your message here..." maxlength="250">
       <box-icon id="chat" type='solid' name='send'>Send</box-icon>
     </div>`;
-  const footer = document.getElementById("copyright")
+  const footer = document.getElementById("copyright");
   footer.append(chatBoxContainer);
   chatBoxContainer.appendChild(chatBox);
   chatButton.classList.add("btnHidden");
@@ -283,30 +283,42 @@ chatButton.addEventListener("click", () => {
     chatButton.classList.add("btnActive");
   });
 });
+function setupChat(userBtn, userInput, chatArea, handleMessage) {
+  if (!userBtn || !userInput || !chatArea) {
+    return;
+  }
+  userBtn.addEventListener("click", (event) => {
+    handleMessage();
+    console.log(userInput.value.length)
+  });
+  userInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      handleMessage();
+    }
+  });
+}
 
 function sendUserMessage() {
   const userBtn = document.getElementById("chat");
   const userInput = document.getElementById("userInput");
   const chatArea = document.getElementById("chatlog");
-  if (!userBtn || !userInput || !chatArea) {
-    return;
-  }
-  userBtn.addEventListener("click", () => {
+  const handleInput = () => {
     let userMessage = "<div class='userMessage'>" + userInput.value + "</div>";
     chatArea.innerHTML += userMessage;
-    userInput.value=""
-  });
-  setTimeout(sendSupportMessage,2000)
+    userInput.value = "";
+  };
+  setupChat(userBtn, userInput, chatArea, handleInput);
+  setTimeout(sendSupportMessage, 2000);
 }
-
-function sendSupportMessage(){
-  const chatArea = document.getElementById("chatlog")
+function sendSupportMessage() {
   const userBtn = document.getElementById("chat");
-  if (!userBtn || !chatArea) {
-    return;
-  }
-  const supportMessage="<div class='supportMessage'>Thanks for your message! Our support team will get back to you shortly.</div>";
-  userBtn.addEventListener("click", () => {
+  const userInput = document.getElementById("userInput");
+  const chatArea = document.getElementById("chatlog");
+  const handleSupport = () => {
+    const supportMessage =
+      "<div class='supportMessage'>Thanks for your message! Our support team will get back to you shortly.</div>";
     chatArea.innerHTML += supportMessage;
-  });
+  };
+  setupChat(userBtn, userInput, chatArea, handleSupport);
 }
+//i will update this function later to check if there is any user input
