@@ -251,7 +251,7 @@ function addToWishList() {
     });
   });
 }
-// Add Pop-up chatbutton
+// Add Pop-up chat-button
 const chatButton = document.getElementById("chat-button");
 
 chatButton.addEventListener("click", () => {
@@ -259,7 +259,7 @@ chatButton.addEventListener("click", () => {
   chatBoxContainer.id = "chatbox-container";
   const chatBox = document.createElement("div");
   chatBox.innerHTML = ` <div id="topheader">
-    <h1>Let's Chat? We are online 24/7<box-icon id="remove" color="white" name='x' ></box-icon></h1>
+    <h1>Let's Chat? We are online 24/7 <box-icon id="remove" name='x' ></box-icon></h1>
   </div>
   <div id="chatbox">
     <div id="chatlog"></div>
@@ -272,7 +272,6 @@ chatButton.addEventListener("click", () => {
   chatBoxContainer.appendChild(chatBox);
   chatButton.classList.add("btnHidden");
   const removeBtn = document.getElementById("remove");
-  console.log(removeBtn);
   sendUserMessage();
   removeBtn.addEventListener("click", () => {
     footer.removeChild(chatBoxContainer);
@@ -284,9 +283,8 @@ function setupChat(userBtn, userInput, chatArea, handleMessage) {
   if (!userBtn || !userInput || !chatArea) {
     return;
   }
-  userBtn.addEventListener("click", (event) => {
+  userBtn.addEventListener("click", () => {
     handleMessage();
-    console.log(userInput.value.length)
   });
   userInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
@@ -294,15 +292,17 @@ function setupChat(userBtn, userInput, chatArea, handleMessage) {
     }
   });
 }
-
 function sendUserMessage() {
   const userBtn = document.getElementById("chat");
   const userInput = document.getElementById("userInput");
   const chatArea = document.getElementById("chatlog");
   const handleInput = () => {
+    const userInputValue = userInput.value.trim();
+    if (userInputValue.length===0){
+      return;
+    }
     let userMessage = "<div class='userMessage'>" + userInput.value + "</div>";
     chatArea.innerHTML += userMessage;
-    userInput.value = "";
   };
   setupChat(userBtn, userInput, chatArea, handleInput);
   setTimeout(sendSupportMessage, 2000);
@@ -312,10 +312,13 @@ function sendSupportMessage() {
   const userInput = document.getElementById("userInput");
   const chatArea = document.getElementById("chatlog");
   const handleSupport = () => {
+    if (userInput.value.length===0){
+      return;
+    }
     const supportMessage =
-      "<div class='supportMessage'>Thanks for your message! Our support team will get back to you shortly.</div>";
+      "<div class='supportMessage'>Thanks for your message! Our support team will get back to you shortly &#128512;.</div>";
     chatArea.innerHTML += supportMessage;
+    userInput.value = "";
   };
   setupChat(userBtn, userInput, chatArea, handleSupport);
 }
-//i will update this function later to check if there is any user input

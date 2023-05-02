@@ -552,33 +552,33 @@ body {
   box-sizing: border-box;
   z-index: 1;
   margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #topheader {
   display: flex;
   justify-content: space-between;
-  background-color: #4caf50;
+  background-color: #00cf8a;
+  color: rgb(13, 75, 54);
   height: 60px;
   padding: 10px;
   border-radius: 5px 5px 0 0;
   position: relative;
 }
 
-h1 {
+#topheader h1 {
   margin: 10px;
   font-size: 22px;
-  color: white;
 }
 
 #remove {
   position: absolute;
   cursor: pointer;
-  color: white;
-  top: 0;
   right: 0;
+  top:0;
   cursor: pointer;
   transition: all 0.2s ease;
-  z-index: 9999;
+  z-index: 999;
 }
 
 #chatbox {
@@ -588,6 +588,7 @@ h1 {
   margin: 2px 0 0 2px;
   position: absolute;
   width: 99%;
+  
 }
 
 #chatlog {
@@ -596,7 +597,8 @@ h1 {
   margin-bottom: 10px;
   height: 80%;
   overflow-x: hidden;
-  padding: 5px;
+  padding: 8px 12px;
+  font-weight: normal;
 }
 
 .input-wrapper {
@@ -614,15 +616,15 @@ h1 {
 
 #userInput {
   flex-grow: 1;
-  padding: 2;
+  padding: 2px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 100%;
+  max-height: 350px;
   width: 100%;
   outline: none;
   margin: 5px;
   bottom: 2px;
-  overflow-y: auto;
+  height:100%;
 }
 
 #chat {
@@ -631,7 +633,7 @@ h1 {
   padding: 5px 10px;
   border-radius: 5px;
   position: absolute;
-  right: 8px;
+  right: 5px;
   width: 10%;
   bottom: 0;
   height: 100%;
@@ -648,12 +650,12 @@ h1 {
   max-width: 75%;
   background-color: #3874ff;
   color: white;
-  padding: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  float: left;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 10px;
+  float: right;
   clear: both;
-  font-size: 15px;
+  font-size: 18px;
   text-align: left;
   height: auto;
 }
@@ -661,14 +663,13 @@ h1 {
 .supportMessage {
   width: auto;
   max-width: 75%;
-  background-color: #4caf50;
-  color: white;
-  padding: 2px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  font-size: 15px;
-  float: right;
+  background-color: #e9ebed;
+  color: rgb(12, 12, 12);
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 10px;
+  font-size: 18px;
+  float: left;
   clear: both;
   text-align: left;
-  /* arrange this to avoid horizontal scrollbar when the message grows */
 }
