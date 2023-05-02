@@ -31,11 +31,13 @@ addDropDown();
 //change webpage theme from light to dark. I set the attributes to inherit but with time i can create custom themes
 function toggleThemes() {
   const themeIcon = document.getElementById("theme");
+  const paymentImage=document.getElementById("paySVG");
 
   themeIcon.addEventListener("click", function () {
     if (themeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
       body.style.backgroundColor = "white";
       body.style.color = "black";
+      paymentImage.src="./images/pesapal.png"
       body.classList.add("dark-theme");
       themeIcon.style.backgroundColor = "white";
       themeIcon.innerHTML =
@@ -43,6 +45,7 @@ function toggleThemes() {
     } else {
       body.style.backgroundColor = "";
       body.style.color = "";
+      paymentImage.src="./images/pesapalblack.png"
       themeIcon.style.backgroundColor = "#8f9779";
       body.classList.remove("dark-theme");
       themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
