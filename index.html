@@ -73,13 +73,26 @@
     <input id="input" type="email" placeholder="Enter your email address" required>
     <button id="subscription">Sign Up</button>
   </section>
+  <section id="chatArea">
+    <div id="chatbox-container" class="chatBoxHidden">
+      <div id="topheader">
+        <h1>Chat with Us <box-icon type='solid'color="rgb(13, 75, 54)" name='message-rounded-dots'></box-icon></h1>
+        <box-icon id="remove" name='x'title="click here to end chat"></box-icon>
+  </div>
+  <div id="chatbox">
+    <div id="chatlog"></div>
+    <div class="input-wrapper">
+      <input id="userInput" placeholder="Type your message here..." maxlength="250">
+      <box-icon id="chat" type='solid'color='#3874ff' name='send'></box-icon>
+    </div>
+  </div>
+    </div>
   <div id="chat-button-container">
     <button id="chat-button">Let's Chat</button>
   </div>
+</section>
   <section id="footer-wrapper">
     <div id="about" class="footer">
-      <!-- <p> SHELLA TRENDY<h6>The Home of Fashion</h6></p>
-      <br> -->
       <h4>About</h4>
       <p> <a href="#about"> About Shella Trendy</a></p>
       <p> <a href="#index.order">Delivery Information</a></p>
@@ -112,14 +125,15 @@
     </div>
     <div id="payment" class="footer">
       <h4>Payment Methods</h4>
-      <img id="paySVG"src="images/pesapalblack.png"alt="payment" width="300px">
+      <img id="paySVG"src="images/pesapalblack.png"alt="payment">
     </div>
   </section>
   <footer id="copyright">
     <hr>
     <p>&#169; 2023 Shella Trendy Collections Ltd.</p>
   </footer>
-  <script src="src/index.js"></script>
 </body>
+<script src="src/index.js"></script>
+<script src="src/chat.js"></script>
 
 </html>

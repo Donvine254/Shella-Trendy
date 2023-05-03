@@ -452,6 +452,9 @@ grid-template-columns: repeat(4, 1fr);
 .footer a:not(:last-child) {
   margin-right: 10px;
 }
+#paySVG {
+  width:300px;
+}
 /* styling for copyright section */
 #copyright {
   bottom: 0;
@@ -498,26 +501,13 @@ grid-template-columns: repeat(4, 1fr);
   position: absolute;
   top: -15px;
   right: 45px;
-  /* background-color: transparent; */
   color: inherit;
   border-radius: 50%;
   padding: 5px;
   font-size: 12px;
 }
-/* styling for chatbutton */
-#chat-button {
-  border: none;
-  background-color: #3e8e41;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: bolder;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  top: 10px;
-}
-.btnActive {
+/* styling for chatbox */
+.btnActive, #chat-button {
   border: none;
   background-color: #4caf50;
   color: white;
@@ -528,13 +518,20 @@ grid-template-columns: repeat(4, 1fr);
   cursor: pointer;
   transition: all 0.2s ease;
 }
+.btnHidden {
+  display: none;
+}
+
 #chat-button:hover {
   background-color: #3874ff;
 }
-#remove:hover {
-  transform: scale(1.1);
-}
 
+#chatArea, #chatbox-container * {
+  box-sizing: border-box;
+  z-index: 1;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 #chatbox-container {
   left: 0;
   bottom: 20px;
@@ -546,39 +543,43 @@ grid-template-columns: repeat(4, 1fr);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   z-index: 1;
+  transition: all 0.2s ease;
 }
 
-#chatbox-container * {
-  box-sizing: border-box;
-  z-index: 1;
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.chatBoxHidden{
+  visibility: hidden;
+  transform: scale(0);
+}
+#remove:hover {
+  transform: scale(1.1);
 }
 
 #topheader {
   display: flex;
   justify-content: space-between;
   background-color: #00cf8a;
-  color: rgb(13, 75, 54);
   height: 60px;
   padding: 10px;
   border-radius: 5px 5px 0 0;
   position: relative;
+  color: rgb(13, 75, 54);
 }
 
 #topheader h1 {
-  margin: 10px;
+  position: absolute;
+  margin:10px;
   font-size: 22px;
+  left:25%
 }
 
 #remove {
   position: absolute;
   cursor: pointer;
+  top: 0;
   right: 0;
-  top:0;
   cursor: pointer;
   transition: all 0.2s ease;
-  z-index: 999;
+  z-index: 100;
 }
 
 #chatbox {
@@ -588,19 +589,24 @@ grid-template-columns: repeat(4, 1fr);
   margin: 2px 0 0 2px;
   position: absolute;
   width: 99%;
-  
 }
 
 #chatlog {
   max-height: auto;
-  overflow-y: auto;
+  overflow-y: scroll;
   margin-bottom: 10px;
   height: 80%;
   overflow-x: hidden;
   padding: 8px 12px;
-  font-weight: normal;
 }
-
+#chatlog .start{
+  position: relative;
+  left: 25%;
+  color:#3e8e41;
+  font-weight: bolder;
+  margin-bottom: 10px;
+ 
+}
 .input-wrapper {
   display: flex;
   justify-content: space-between;
@@ -616,21 +622,26 @@ grid-template-columns: repeat(4, 1fr);
 
 #userInput {
   flex-grow: 1;
-  padding: 2px;
+  padding: 2;
   border: 1px solid #ccc;
   border-radius: 5px;
-  max-height: 350px;
-  width: 100%;
+  height: 100%;
   outline: none;
   margin: 5px;
   bottom: 2px;
-  height:100%;
+  max-width: 350px;
+  overflow-x: hidden;
+
+}
+#userInput:focus {
+  box-sizing: border-box;
+  box-shadow: 0px, 5px, 10px rgba(0, 0, 0, 0.2);
 }
 
 #chat {
   cursor: pointer;
   color: white;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 5px;
   position: absolute;
   right: 5px;
@@ -639,37 +650,42 @@ grid-template-columns: repeat(4, 1fr);
   height: 100%;
 }
 
-#chat:hover {
-  background-color: #388e3c;
-}
-.btnHidden {
-  display: none;
-}
 .userMessage {
   width: auto;
   max-width: 75%;
   background-color: #3874ff;
   color: white;
   padding: 8px 12px;
-  margin: 5px;
-  border-radius: 10px;
+  margin: 5px 5px;
+  border-radius: 32px 0 32px 32px;
   float: right;
   clear: both;
   font-size: 18px;
   text-align: left;
   height: auto;
+  margin-bottom: 10px;
 }
-
+.userMessage p{
+  float: right;
+  position: relative;
+  right:0;
+}
 .supportMessage {
   width: auto;
   max-width: 75%;
   background-color: #e9ebed;
-  color: rgb(12, 12, 12);
+  color: black;
   padding: 8px 12px;
-  margin: 5px;
-  border-radius: 10px;
+  margin: 5px 5px;
+  border-radius: 0 32px 32px 32px;
   font-size: 18px;
   float: left;
   clear: both;
   text-align: left;
+  margin-bottom: 10px;
+}
+.supportMessage p{
+  float: left;
+  position: relative;
+  left:0;
 }

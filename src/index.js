@@ -238,90 +238,11 @@ function addToWishList() {
         alert(`This item has been added to your wishlist`);
       } else {
         item.removeAttribute("type");
-        item.setAttribute("color", "yellow");
+        item.setAttribute("color", "gold");
         item.setAttribute("name", "heart");
         isLiked = false;
         alert(`This item has been removed from your wishlist`);
       }
-    });
-    item.addEventListener("mouseover", function () {
-      item.style.transform = "scale(1.5)";
-      item.setAttribute("animation", "burst");
-    });
-    item.addEventListener("mouseout", function () {
-      item.style.transform = "scale(1)";
-      item.removeAttribute("animation");
-    });
+    });  
   });
-}
-// Add Pop-up chat-button
-const chatButton = document.getElementById("chat-button");
-
-chatButton.addEventListener("click", () => {
-  const chatBoxContainer = document.createElement("section");
-  chatBoxContainer.id = "chatbox-container";
-  const chatBox = document.createElement("div");
-  chatBox.innerHTML = ` <div id="topheader">
-    <h1>Let's Chat? We are online 24/7 <box-icon id="remove" name='x' ></box-icon></h1>
-  </div>
-  <div id="chatbox">
-    <div id="chatlog"></div>
-    <div class="input-wrapper">
-      <input id="userInput" placeholder="Type your message here..." maxlength="250">
-      <box-icon id="chat" type='solid' name='send'>Send</box-icon>
-    </div>`;
-  const footer = document.getElementById("copyright");
-  footer.append(chatBoxContainer);
-  chatBoxContainer.appendChild(chatBox);
-  chatButton.classList.add("btnHidden");
-  const removeBtn = document.getElementById("remove");
-  sendUserMessage();
-  removeBtn.addEventListener("click", () => {
-    footer.removeChild(chatBoxContainer);
-    chatButton.classList.remove("btnHidden");
-    chatButton.classList.add("btnActive");
-  });
-});
-function setupChat(userBtn, userInput, chatArea, handleMessage) {
-  if (!userBtn || !userInput || !chatArea) {
-    return;
-  }
-  userBtn.addEventListener("click", () => {
-    handleMessage();
-  });
-  userInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-      handleMessage();
-    }
-  });
-}
-function sendUserMessage() {
-  const userBtn = document.getElementById("chat");
-  const userInput = document.getElementById("userInput");
-  const chatArea = document.getElementById("chatlog");
-  const handleInput = () => {
-    const userInputValue = userInput.value.trim();
-    if (userInputValue.length===0){
-      return;
-    }
-    let userMessage = "<div class='userMessage'>" + userInput.value + "</div>";
-    chatArea.innerHTML += userMessage;
-  };
-  setupChat(userBtn, userInput, chatArea, handleInput);
-  setTimeout(sendSupportMessage, 2000);
-}
-function sendSupportMessage() {
-  const userBtn = document.getElementById("chat");
-  const userInput = document.getElementById("userInput");
-  const chatArea = document.getElementById("chatlog");
-  const handleSupport = () => {
-    if (userInput.value.length===0){
-      return;
-    }
-    const supportMessage =
-      "<div class='supportMessage'>Thanks for your message! Our support team will get back to you shortly &#128512;.</div>";
-    chatArea.innerHTML += supportMessage;
-    userInput.value = "";
-  };
-  setupChat(userBtn, userInput, chatArea, handleSupport);
 }
