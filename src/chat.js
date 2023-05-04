@@ -14,6 +14,10 @@ startChatBtn.addEventListener("click", () => {
 });
 
 closeChatbtn.addEventListener("click", () => {
+  const endMessage = document.getElementsByClassName("endChat")[0];
+  if (endMessage) {
+    return;
+  }
   updateChat();
 });
 
@@ -39,9 +43,10 @@ function endChat(userInput) {
 }
 function updateChat() {
   let endMessage =
-    '<div class="endChat"><p>Are you sure you want to end the conversation?</p><button id="end" onclick="closeChat()">Yes</button><button id="cancel" onclick="continueChat()">No</button></div>';
-  chatlog.innerHTML += endMessage;
-  chatlog.scrollTop = chatlog.scrollHeight;
+    '<div class="endChat"><p>Are you sure you want to end this conversation?</p><button id="end" onclick="closeChat()">Yes</button><button id="cancel" onclick="continueChat()">No</button></div>';
+    chatlog.innerHTML += endMessage;
+    chatlog.scrollTop = chatlog.scrollHeight;
+  
 }
 
 function continueChat() {
