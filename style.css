@@ -354,7 +354,7 @@ body {
   background-color: #3874ff;
   margin-top: 20px;
   margin-bottom: 20px;
-  width:100%
+  width: 100%;
 }
 
 #newsletter .newstext {
@@ -412,15 +412,15 @@ body {
 /* styling for footer section */
 
 #footer-wrapper {
- display:grid;
-grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px; 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
   justify-content: space-between;
   margin-top: 20px;
   background-color: inherit;
   color: inherit;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding:10px;
+  padding: 10px;
 }
 
 .footer {
@@ -428,6 +428,7 @@ grid-template-columns: repeat(4, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
+  line-height: 2rem;
 }
 
 .footer h4 {
@@ -453,7 +454,7 @@ grid-template-columns: repeat(4, 1fr);
   margin-right: 10px;
 }
 #paySVG {
-  width:300px;
+  width: 300px;
 }
 /* styling for copyright section */
 #copyright {
@@ -507,7 +508,8 @@ grid-template-columns: repeat(4, 1fr);
   font-size: 12px;
 }
 /* styling for chatbox */
-.btnActive, #chat-button {
+.btnActive,
+#chat-button {
   border: none;
   background-color: #4caf50;
   color: white;
@@ -526,11 +528,13 @@ grid-template-columns: repeat(4, 1fr);
   background-color: #3874ff;
 }
 
-#chatArea, #chatbox-container * {
+#chatArea,
+#chatbox-container * {
   box-sizing: border-box;
   z-index: 1;
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 #chatbox-container {
   left: 0;
@@ -546,7 +550,7 @@ grid-template-columns: repeat(4, 1fr);
   transition: all 0.2s ease;
 }
 
-.chatBoxHidden{
+.chatBoxHidden {
   visibility: hidden;
   transform: scale(0);
 }
@@ -567,9 +571,9 @@ grid-template-columns: repeat(4, 1fr);
 
 #topheader h1 {
   position: absolute;
-  margin:10px;
+  margin: 10px;
   font-size: 22px;
-  left:25%
+  left: 25%;
 }
 
 #remove {
@@ -589,6 +593,7 @@ grid-template-columns: repeat(4, 1fr);
   margin: 2px 0 0 2px;
   position: absolute;
   width: 99%;
+  padding: 5px;
 }
 
 #chatlog {
@@ -599,13 +604,19 @@ grid-template-columns: repeat(4, 1fr);
   overflow-x: hidden;
   padding: 8px 12px;
 }
-#chatlog .start{
+#chatlog div {
+  margin-bottom: 5px;
+  padding: 10px;
+  justify-items: stretch;
+}
+#chatlog .start {
   position: relative;
   left: 25%;
-  color:#3e8e41;
+  color: #3e8e41;
   font-weight: bolder;
   margin-bottom: 10px;
- 
+  margin-top: 0px;
+  padding: 0px;
 }
 .input-wrapper {
   display: flex;
@@ -631,7 +642,6 @@ grid-template-columns: repeat(4, 1fr);
   bottom: 2px;
   max-width: 350px;
   overflow-x: hidden;
-
 }
 #userInput:focus {
   box-sizing: border-box;
@@ -665,10 +675,10 @@ grid-template-columns: repeat(4, 1fr);
   height: auto;
   margin-bottom: 10px;
 }
-.userMessage p{
+.userMessage p {
   float: right;
   position: relative;
-  right:0;
+  right: 0;
 }
 .supportMessage {
   width: auto;
@@ -682,10 +692,51 @@ grid-template-columns: repeat(4, 1fr);
   float: left;
   clear: both;
   text-align: left;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
-.supportMessage p{
+.supportMessage p {
   float: left;
   position: relative;
+  left: 0;
+}
+.edChat{
+  max-width: 75%;
+  display:flex;
+  padding:0;;
+}
+.endChat p {
+  position: relative;
+  float: center;
+  color: #3e8e41;
+  padding: 0px;
+  max-width: 75%;
+  clear:both;
+  left:20%;
+}
+.endChat #end{
+  border-radius: 5px;
+  height:40px;
+  background-color: #363535;
+  padding:0 5%;
+  margin:10px;
+  color: white;
+  float:left;
   left:0;
+}
+.endChat #end:hover{
+  background-color: red;
+}
+.endChat #cancel{
+  border-radius: 5px;
+  height:40px;
+  background-color: #088178;
+  padding:0 5%;
+  margin:10px;
+  color: white;
+  float:right;
+  right:0;
+  z-index: 999;
+}
+.endchat #cancel:hover{
+  background-color: #0d2e74;
 }

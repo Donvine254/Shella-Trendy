@@ -3,14 +3,18 @@ const startChatBtn = document.getElementById("chat-button");
 const chatButtonContainer = document.getElementById("chat-button-container");
 const chatBoxContainer = document.getElementById("chatbox-container");
 const closeChatbtn = document.getElementById("remove");
+let chatlog = document.getElementById("chatlog");
+//add event listeners to initialize chat
 startChatBtn.addEventListener("click", () => {
   openChat();
   chatButtonContainer.removeChild(startChatBtn);
+  welcomeMessage(
+    "Hello, thank you for contacting Shella Trendy. How can I help you today? &#128512"
+  );
 });
 
 closeChatbtn.addEventListener("click", () => {
-  closeChat();
-  chatButtonContainer.appendChild(startChatBtn);
+  updateChat();
 });
 
 function openChat() {
@@ -18,8 +22,35 @@ function openChat() {
 }
 function closeChat() {
   chatBoxContainer.classList.add("chatBoxHidden");
+  chatlog.innerHTML = "";
+  const endMessage = document.getElementsByClassName("endChat")[0];
+  if (endMessage) {
+    endMessage.remove();
+  }
+  chatButtonContainer.appendChild(startChatBtn);
+}
+function endChat(userInput) {
+  userInput = userInput.toLowerCase();
+  if (userInput.includes("end chat")) {
+    setTimeout(10000, chatBoxContainer.classList.add("chatBoxHidden"));
+    chatlog.innerHTML = "";
+    chatButtonContainer.appendChild(startChatBtn);
+  }
+}
+function updateChat() {
+  let endMessage =
+    '<div class="endChat"><p>Are you sure you want to end the conversation?</p><button id="end" onclick="closeChat()">Yes</button><button id="cancel" onclick="continueChat()">No</button></div>';
+  chatlog.innerHTML += endMessage;
+  chatlog.scrollTop = chatlog.scrollHeight;
 }
 
+function continueChat() {
+  const endMessage = document.getElementsByClassName("endChat")[0];
+  if (endMessage) {
+    endMessage.remove();
+  }
+}
+//function to keep track of the time messages are sent
 function getTime() {
   let date = new Date();
   let day = date.getDate();
@@ -34,7 +65,6 @@ function getTime() {
   let time = hours + ":" + minutes;
   return time;
 }
-let chatlog = document.getElementById("chatlog");
 
 function welcomeMessage(message) {
   let chatStart = `<div class="start">Chat Started at ${getTime()}</div>`;
@@ -42,9 +72,9 @@ function welcomeMessage(message) {
   chatlog.innerHTML += chatStart;
   chatlog.innerHTML += greetings;
 }
-welcomeMessage(
-  "Hello, thank you for contacting Shella Trendy. How can we help you? &#128512"
-);
+// welcomeMessage(
+//   "Hello, thank you for contacting Shella Trendy. How can I help you today? &#128512"
+// );
 
 function sendUserInput(event) {
   if (event) {
@@ -58,7 +88,7 @@ function sendUserInput(event) {
   }
 
   document.getElementById("userInput").value = "";
-  let userMessage = `<div class='userMessage'> <p> ${getTime()}</p> ${userInput}</div>`;
+  let userMessage = `<div class='userMessage'> <p>&nbsp;&nbsp${getTime()}</p> ${userInput}</div>`;
   chatlog.innerHTML += userMessage;
   setTimeout(sendSupportMessage(userInput), 1000);
   endChat(userInput);
@@ -106,6 +136,8 @@ function getResponse(userInput) {
     userInput == "how is the going"
   ) {
     return "I am doing fine, how about you?";
+  } else if (userInput.includes("bored")) {
+    return "I am bored too, maybe we can do something";
   } else if (userInput.includes("name")) {
     return "My name is Don, what is your name?";
   } else if (userInput.includes("email")) {
@@ -133,13 +165,9 @@ function getResponse(userInput) {
     return "we are located at 123 Kimathi Street Nairobi";
   } else if (userInput.includes("thanks") || userInput.includes("thank you")) {
     return "Welcome, Always a pleasure to talk with you &#128151";
+  } else if (userInput.includes("end chat")) {
+    return "As you wish sire!";
   } else {
     return "Sorry, I don't understand. Please try something else.";
-  }
-}
-function endChat(userInput) {
-  if (userInput.includes("end chat")) {
-    setTimeout(chatBoxContainer.classList.add("chatBoxHidden"), 10000);
-    chatButtonContainer.appendChild(startChatBtn);
   }
 }
