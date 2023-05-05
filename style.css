@@ -590,10 +590,22 @@ body {
   position: absolute;
   cursor: pointer;
   top: 5px;
-  right: 50px;
+  right: 60px;
+  color: rgb(13, 75, 54);
   cursor: pointer;
-  transition: all 0.2s ease;
   z-index: 100;
+}
+#maximize{
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
+  z-index: 100;
+  font-size:20px;
+  font-weight:bolder;
+  color:black;
+
 }
 #chatbox {
   background-color: #fff;

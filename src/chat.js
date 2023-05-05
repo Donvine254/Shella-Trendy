@@ -70,6 +70,7 @@ function minimizeChat() {
   isChatMinimized = true;
 }
 document.getElementById("minimize").addEventListener("click", minimizeChat);
+
 //function to keep track of the time messages are sent
 function getTime() {
   let date = new Date();
