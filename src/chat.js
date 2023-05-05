@@ -16,7 +16,8 @@ startChatBtn.addEventListener("click", () => {
 closeChatbtn.addEventListener("click", () => {
   const endMessage = document.getElementsByClassName("endChat")[0];
   if (endMessage) {
-    return;
+    chatBoxContainer.classList.add("chatBoxHidden")
+    chatButtonContainer.appendChild(startChatBtn);
   }
   updateChat();
 });
@@ -44,9 +45,8 @@ function endChat(userInput) {
 function updateChat() {
   let endMessage =
     '<div class="endChat"><p>Are you sure you want to end this conversation?</p><button id="end" onclick="closeChat()">Yes</button><button id="cancel" onclick="continueChat()">No</button></div>';
-    chatlog.innerHTML += endMessage;
-    chatlog.scrollTop = chatlog.scrollHeight;
-  
+  chatlog.innerHTML += endMessage;
+  chatlog.scrollTop = chatlog.scrollHeight;
 }
 
 function continueChat() {
@@ -61,25 +61,19 @@ function getTime() {
   let day = date.getDate();
   let hours = date.getHours();
   let minutes = date.getMinutes();
-  if (hours < 10) {
-    hours = "0" + hours;
-  }
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
   let time = hours + ":" + minutes;
   return time;
 }
-
+//provide a welcome message when the chat is initialized
 function welcomeMessage(message) {
   let chatStart = `<div class="start">Chat Started at ${getTime()}</div>`;
   let greetings = '<div class="supportMessage">' + message + "</div>";
   chatlog.innerHTML += chatStart;
   chatlog.innerHTML += greetings;
 }
-// welcomeMessage(
-//   "Hello, thank you for contacting Shella Trendy. How can I help you today? &#128512"
-// );
+//append user input to the chatlog
 
 function sendUserInput(event) {
   if (event) {
@@ -123,6 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("chat")
     .addEventListener("click", () => sendUserInput());
 });
+//provide test cases to train the bot on how to respond to user input.
 function getResponse(userInput) {
   userInput = userInput.toLowerCase();
   if (userInput.length === 0) {
