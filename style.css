@@ -584,8 +584,17 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   z-index: 100;
-}
 
+}
+#minimize{
+  position: absolute;
+  cursor: pointer;
+  top: 5px;
+  right: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 100;
+}
 #chatbox {
   background-color: #fff;
   border-radius: 0 0 5px 5px;

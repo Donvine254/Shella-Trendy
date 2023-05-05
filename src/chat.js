@@ -4,19 +4,18 @@ const chatButtonContainer = document.getElementById("chat-button-container");
 const chatBoxContainer = document.getElementById("chatbox-container");
 const closeChatbtn = document.getElementById("remove");
 let chatlog = document.getElementById("chatlog");
+let isChatClosed = false;
 //add event listeners to initialize chat
+document.addEventListener("DOMContentLoaded",()=>isChatClosed=true)
 startChatBtn.addEventListener("click", () => {
-  openChat();
   chatButtonContainer.removeChild(startChatBtn);
-  welcomeMessage(
-    "Hello, thank you for contacting Shella Trendy. How can I help you today? &#128512"
-  );
+  openChat()
 });
 
 closeChatbtn.addEventListener("click", () => {
   const endMessage = document.getElementsByClassName("endChat")[0];
   if (endMessage) {
-    chatBoxContainer.classList.add("chatBoxHidden")
+    chatBoxContainer.classList.add("chatBoxHidden");
     chatButtonContainer.appendChild(startChatBtn);
   }
   updateChat();
@@ -24,6 +23,14 @@ closeChatbtn.addEventListener("click", () => {
 
 function openChat() {
   chatBoxContainer.classList.remove("chatBoxHidden");
+  userInput.focus()
+  isChatMinimized = false;
+  if (isChatClosed==true) { // check if the chat was closed
+    welcomeMessage(
+      "Hello, thank you for contacting Shella Trendy. How can I help you today? &#128512"
+    );
+    isChatClosed = false; 
+  }
 }
 function closeChat() {
   chatBoxContainer.classList.add("chatBoxHidden");
@@ -33,6 +40,7 @@ function closeChat() {
     endMessage.remove();
   }
   chatButtonContainer.appendChild(startChatBtn);
+  isChatClosed = true;
 }
 function endChat(userInput) {
   userInput = userInput.toLowerCase();
@@ -55,6 +63,13 @@ function continueChat() {
     endMessage.remove();
   }
 }
+let isChatMinimized = false;
+function minimizeChat() {
+  chatBoxContainer.classList.add("chatBoxHidden");
+  chatButtonContainer.appendChild(startChatBtn);
+  isChatMinimized = true;
+}
+document.getElementById("minimize").addEventListener("click", minimizeChat);
 //function to keep track of the time messages are sent
 function getTime() {
   let date = new Date();
