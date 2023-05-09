@@ -3,13 +3,13 @@ body {
   color: white;
   font-size: larger;
   width: 100%;
-  margin: 0;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0 5px;
+  font-family: "League Spartan", sans-serif;
   overflow-x: hidden;
 }
 
 * {
-  margin: 0 0 0 2px;
+  margin: 0 5px;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -149,12 +149,13 @@ body {
   list-style: none;
   padding: 5px;
   margin: 0;
-  background-color:#423b31;
+  background-color: #423b31;
   border: 1px groove #363535;
   width: 100px;
   font-size: 24px;
   position: absolute;
   box-shadow: 0px 5px 10px rgba(143, 136, 136, 0.2);
+  transition: 0.3s ease-in-out;
 }
 
 .dropdown-menu li {
@@ -780,12 +781,18 @@ body {
     flex-basis: 25%;
   }
   .banner {
-    background-position: center;
-    padding-top: 10px;
-    margin-left: 0px;
+    background-position: top 30% right 30%;
+    padding:0 40px;
+    height:70vh;
+    margin-top: 30px;
+
   }
   .container {
     margin-left: 0px;
-    bottom: 0px;
+    align-items: flex-start;
+
   }
+  .container h1 {
+    padding-bottom: 10px;
+}
 }
