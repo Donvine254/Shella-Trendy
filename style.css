@@ -5,6 +5,7 @@ body {
   width: 100%;
   margin: 0;
   font-family: Georgia, "Times New Roman", Times, serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -148,7 +149,7 @@ body {
   list-style: none;
   padding: 5px;
   margin: 0;
-  background-color: inherit;
+  background-color:#423b31;
   border: 1px groove #363535;
   width: 100px;
   font-size: 24px;
