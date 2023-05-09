@@ -541,10 +541,10 @@ body {
   bottom: 20px;
   margin: 20px;
   position: fixed;
-  width: 400px;
-  height: 500px;
-  background-color: white;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 600px;
+  background-image: url(./images/chat.jpg);
+  background-size: cover;
   border-radius: 10px;
   z-index: 1;
   transition: all 0.2s ease;
@@ -554,9 +554,7 @@ body {
   visibility: hidden;
   transform: scale(0);
 }
-#remove:hover {
-  transform: scale(1.1);
-}
+
 
 #topheader {
   display: flex;
@@ -586,29 +584,22 @@ body {
   z-index: 100;
 
 }
+#remove:hover {
+  transform: scale(1.1);
+}
 #minimize{
   position: absolute;
   cursor: pointer;
-  top: 5px;
-  right: 60px;
-  color: rgb(13, 75, 54);
+  top: 0;
+  right: 30px;
   cursor: pointer;
   z-index: 100;
+  transition: all 0.2s ease;
 }
-#maximize{
-  position: absolute;
-  cursor: pointer;
-  top: 10px;
-  right: 40px;
-  cursor: pointer;
-  z-index: 100;
-  font-size:20px;
-  font-weight:bolder;
-  color:black;
-
+#minimize:hover {
+  transform: scale(1.1);
 }
 #chatbox {
-  background-color: #fff;
   border-radius: 0 0 5px 5px;
   height: 85%;
   margin: 2px 0 0 2px;
@@ -621,7 +612,7 @@ body {
   max-height: auto;
   overflow-y: scroll;
   margin-bottom: 10px;
-  height: 80%;
+  height: 90%;
   overflow-x: hidden;
   padding: 8px 12px;
 }
@@ -644,25 +635,44 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 5px;
-  height: 20%;
+  height: 10%;
   position: absolute;
   padding: 0;
   margin: 0;
   width: 100%;
   bottom: 0;
 }
+#emoji-button{
+  font-size:30px;
+  margin:0;
+  flex-shrink: 0;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  left:0px;
+  padding-left: 0px;
+  cursor: pointer;
+}
+#emoji-button:hover{
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
 
 #userInput {
   flex-grow: 1;
-  padding: 2;
+  padding: 2px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 100%;
   outline: none;
   margin: 5px;
   bottom: 2px;
-  max-width: 350px;
+  max-width: 80%;
   overflow-x: hidden;
+  overflow-y: scroll;
+  margin-left:40px;
+  font-size: 1.2rem;
 }
 #userInput:focus {
   box-sizing: border-box;
@@ -679,12 +689,16 @@ body {
   width: 10%;
   bottom: 0;
   height: 100%;
+  flex-shrink: 0;
 }
-
+#chat:active{
+background-color:#ada6a6;
+border-radius: 50%;
+}
 .userMessage {
   width: auto;
   max-width: 75%;
-  background-color: #3874ff;
+  background-color: #088178;
   color: white;
   padding: 8px 12px;
   margin: 5px 5px;
@@ -704,8 +718,8 @@ body {
 .supportMessage {
   width: auto;
   max-width: 75%;
-  background-color: #e9ebed;
-  color: black;
+  background-color:#1f2c34;
+  color: white;
   padding: 8px 12px;
   margin: 5px 5px;
   border-radius: 0 32px 32px 32px;
@@ -720,19 +734,12 @@ body {
   position: relative;
   left: 0;
 }
-.edChat{
-  max-width: 75%;
-  display:flex;
-  padding:0;;
-}
 .endChat p {
-  position: relative;
   float: center;
-  color: #3e8e41;
+  color:#1f2c34;
   padding: 0px;
-  max-width: 75%;
   clear:both;
-  left:20%;
+  left:0%;
 }
 .endChat #end{
   border-radius: 5px;
@@ -758,6 +765,6 @@ body {
   right:0;
   z-index: 999;
 }
-.endchat #cancel:hover{
+.endChat #cancel:hover{
   background-color: #0d2e74;
 }
