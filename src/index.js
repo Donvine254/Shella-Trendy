@@ -37,7 +37,6 @@ function toggleThemes() {
     if (themeIcon.innerHTML === '<i class="fa-solid fa-moon"></i>') {
       body.style.backgroundColor = "white";
       body.style.color = "black";
-      paymentImage.src="./images/pesapal.png"
       body.classList.add("dark-theme");
       themeIcon.style.backgroundColor = "white";
       themeIcon.innerHTML =
@@ -45,7 +44,6 @@ function toggleThemes() {
     } else {
       body.style.backgroundColor = "";
       body.style.color = "";
-      paymentImage.src="./images/pesapalblack.png"
       themeIcon.style.backgroundColor = "#8f9779";
       body.classList.remove("dark-theme");
       themeIcon.innerHTML = '<i class="fa-solid fa-moon"></i>';
