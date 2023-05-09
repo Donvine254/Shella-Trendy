@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/9713291cb7.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700" rel="stylesheet">
   <title>Shella Trendy Collections</title>
 </head>
 
@@ -31,7 +32,7 @@
   </header>
   <section id="ecommerce">
     <div class="navigation">
-      <a href="#" class="dropdown"><i class="fa-solid fa-bars"></i> Category</a>
+      <a class="dropdown"><i class="fa-solid fa-bars"></i> Category</a>
     </div>
     <div class="dropdown-container"></div>
     <div class="extras">
@@ -39,8 +40,8 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li> <a href="#products">Shop</a> </li>
         <li><a href="#blog">Blog</a> </li>
-        <li><a href="#my-account">Shipping Info</a> </li>
-        <li><a href="#my-account">Track Order</a> </li>
+        <li id="shipping"><a href="#my-account">Shipping Info</a> </li>
+        <li id="track-Order"><a href="#my-account">Track Order</a> </li>
         <li><a href="#order.html">Checkout</a> </li>
         <li id="contacts"> <a href="#contact">Contact Us</a> </li>
       </ul>
@@ -51,12 +52,12 @@
   <div class="search-results"></div>
   <!-- append the dropdown menu from here -->
   <section class="banner">
-    <h1><strong>Whooping <span>60% </span>Off!</strong></h1>
-    <br>
-    <h2>On all Products Categories</h2>
-    <h3>Shop now and enjoy special discounts</h3>
-    <br>
-    <a href="#products"> <button>Shop Now</button></a>
+    <div class="container"><h1><strong>Whooping <span>60% </span>Off!</strong></h1>
+      <br>
+      <h2>On all Products Categories</h2>
+      <h3>Shop now and enjoy special discounts</h3>
+      <br>
+      <a href="#products"> <button>Shop Now</button></a></div>
   </section>
   <div class="featuredproducts">
     <h1>Featured Products</h1>
@@ -127,7 +128,11 @@
     </div>
     <div id="payment" class="footer">
       <h4>Payment Methods</h4>
-      <img id="paySVG"src="images/pesapalblack.png"alt="payment">
+      <p>Cash On Delivery</p>
+      <p>Lipa na Mpesa</p>
+      <p>Mastercard</p>
+      <p>Visa</p>
+      <p>Airtel Money</p>
     </div>
   </section>
   <footer id="copyright">

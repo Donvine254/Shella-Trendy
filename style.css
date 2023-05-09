@@ -453,9 +453,6 @@ body {
 .footer a:not(:last-child) {
   margin-right: 10px;
 }
-#paySVG {
-  width: 300px;
-}
 /* styling for copyright section */
 #copyright {
   bottom: 0;
@@ -555,7 +552,6 @@ body {
   transform: scale(0);
 }
 
-
 #topheader {
   display: flex;
   justify-content: space-between;
@@ -582,12 +578,11 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   z-index: 100;
-
 }
 #remove:hover {
   transform: scale(1.1);
 }
-#minimize{
+#minimize {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -642,19 +637,19 @@ body {
   width: 100%;
   bottom: 0;
 }
-#emoji-button{
-  font-size:30px;
-  margin:0;
+#emoji-button {
+  font-size: 30px;
+  margin: 0;
   flex-shrink: 0;
   padding: 10px;
   border: none;
   background-color: transparent;
   position: absolute;
-  left:0px;
+  left: 0px;
   padding-left: 0px;
   cursor: pointer;
 }
-#emoji-button:hover{
+#emoji-button:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease-in-out;
 }
@@ -671,7 +666,7 @@ body {
   max-width: 80%;
   overflow-x: hidden;
   overflow-y: scroll;
-  margin-left:40px;
+  margin-left: 40px;
   font-size: 1.2rem;
 }
 #userInput:focus {
@@ -691,9 +686,9 @@ body {
   height: 100%;
   flex-shrink: 0;
 }
-#chat:active{
-background-color:#ada6a6;
-border-radius: 50%;
+#chat:active {
+  background-color: #ada6a6;
+  border-radius: 50%;
 }
 .userMessage {
   width: auto;
@@ -718,7 +713,7 @@ border-radius: 50%;
 .supportMessage {
   width: auto;
   max-width: 75%;
-  background-color:#1f2c34;
+  background-color: #1f2c34;
   color: white;
   padding: 8px 12px;
   margin: 5px 5px;
@@ -736,35 +731,60 @@ border-radius: 50%;
 }
 .endChat p {
   float: center;
-  color:#1f2c34;
+  color: #1f2c34;
   padding: 0px;
-  clear:both;
-  left:0%;
+  clear: both;
+  left: 0%;
 }
-.endChat #end{
+.endChat #end {
   border-radius: 5px;
-  height:40px;
+  height: 40px;
   background-color: #363535;
-  padding:0 5%;
-  margin:10px;
+  padding: 0 5%;
+  margin: 10px;
   color: white;
-  float:left;
-  left:0;
+  float: left;
+  left: 0;
 }
-.endChat #end:hover{
+.endChat #end:hover {
   background-color: red;
 }
-.endChat #cancel{
+.endChat #cancel {
   border-radius: 5px;
-  height:40px;
+  height: 40px;
   background-color: #088178;
-  padding:0 5%;
-  margin:10px;
+  padding: 0 5%;
+  margin: 10px;
   color: white;
-  float:right;
-  right:0;
+  float: right;
+  right: 0;
   z-index: 999;
 }
-.endChat #cancel:hover{
+.endChat #cancel:hover {
   background-color: #0d2e74;
+}
+/* CSS for responsiveness */
+@media screen and (max-width: 900px) {
+  .search-form {
+    display: none;
+  }
+  #shipping,
+  #contacts,
+  #track-Order {
+    display: none;
+  }
+  #footer-wrapper {
+    line-height: normal;
+    display: inline-flex;
+    flex-basis: 25%;
+  }
+  .banner {
+    background-position: center;
+    padding-top: 10px;
+    margin-left: 0px;
+  }
+  .container {
+    margin-left: 0px;
+    bottom: 0px;
+  }
 }
