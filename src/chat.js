@@ -15,9 +15,7 @@ startChatBtn.addEventListener("click", () => {
 closeChatbtn.addEventListener("click", () => {
   const endMessage = document.getElementsByClassName("endChat")[0];
   if (endMessage) {
-    endMessage.remove();
-    chatBoxContainer.classList.add("chatBoxHidden");
-    chatButtonContainer.appendChild(startChatBtn);
+    closeChat()
   }
   else {
     updateChat();
@@ -48,9 +46,7 @@ function closeChat() {
 function endChat(userInput) {
   userInput = userInput.toLowerCase();
   if (userInput.includes("end chat")) {
-    setTimeout(10000, chatBoxContainer.classList.add("chatBoxHidden"));
-    chatlog.innerHTML = "";
-    chatButtonContainer.appendChild(startChatBtn);
+    closeChat()
   }
 }
 function updateChat() {
