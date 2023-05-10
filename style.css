@@ -389,6 +389,7 @@ body {
   border-radius: 5px 0 0 5px;
   border: 1px solid #ccc;
   border-right: none;
+  margin:0;
   outline: none;
   width: 60%;
   height: 40px;
@@ -404,6 +405,7 @@ body {
   border-left: none;
   height: 40px;
   width: 150px;
+  margin:0;
 }
 
 #newsletter button:hover {
