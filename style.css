@@ -1,3 +1,6 @@
+html {
+  width: 100%;
+}
 body {
   background-color: black;
   color: white;
@@ -11,7 +14,6 @@ body {
 * {
   margin: 0 5px;
   padding: 0;
-  width:100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -788,7 +790,7 @@ body {
     padding: 0 40px;
     height: 70vh;
     margin-top: 30px;
-    width:100%;
+    width: 100%;
   }
   .container {
     margin-left: 0px;
@@ -801,36 +803,44 @@ body {
 @media screen and (max-width: 670px) {
   body {
     font-size: 14px;
+    width: 100%;
   }
   #header {
     padding: 0;
     width: 100%;
-    margin:0px;
+    margin: 0px;
   }
   #logo {
     width: 30%;
+  }
+  .banner{
+    width:100%;
   }
 
   .navbar #nav {
     right: 0;
   }
-  #nav ul{
-    padding:0;
-    margin:0;
+  #nav ul {
+    padding: 0;
+    margin: 0;
     align-items: flex-start;
     font-size: small;
-    right:0;
+    right: 0;
   }
   #footer-wrapper {
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     grid-gap: 20px;
     justify-content: space-between;
-    width:100%;
+    width: 100%;
   }
-  #chatbox-container{
-    height: 100dvh;
-    width:100dvw;
-    margin:0;
+  #chatbox-container {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  #newsletter {
+    width: 100%;
+    font-size: 16px;
   }
 }
