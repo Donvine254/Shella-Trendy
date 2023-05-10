@@ -781,7 +781,7 @@ body {
     display: none;
   }
   #footer-wrapper {
-    line-height: normal;
+    line-height: 1;
     display: inline-flex;
     flex-basis: 25%;
   }
@@ -800,7 +800,10 @@ body {
     padding-bottom: 10px;
   }
 }
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 768px) {
+  html{
+    width:100vh;
+  }
   body {
     font-size: 14px;
     width: 100%;
@@ -815,6 +818,8 @@ body {
   }
   .banner{
     width:100%;
+    margin-left: 0;
+    margin-right:0;
   }
 
   .navbar #nav {
@@ -833,14 +838,24 @@ body {
     grid-gap: 20px;
     justify-content: space-between;
     width: 100%;
+    margin-left: 0;
+    margin-right:0;
   }
   #chatbox-container {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     margin: 0;
   }
   #newsletter {
     width: 100%;
     font-size: 16px;
+    margin-left: 0;
+    margin-right:0;
+  }
+  #copyright{
+    width:100%;
+    margin-left: 0;
+    margin-right:0;
+
   }
 }
