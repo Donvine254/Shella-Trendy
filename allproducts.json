@@ -1,0 +1,250 @@
+{
+    "clothes": [
+      {
+        "id": 1,
+        "name": "blue and green shirt",
+        "price": 1500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/blue_and_green_shirt.png?raw=true",
+        "ratings":"4.8",
+        "description": "A stylish blue and green shirt that will make you stand out from the crowd."
+      },
+      {
+        "id": 2,
+        "name": "colored shirt male",
+        "price": 1500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/Colored-Shirt_male.png?raw=true",
+        "ratings":"4.9",
+        "description": "A comfortable and fashionable colored shirt for men."
+      },
+      {
+        "id": 3,
+        "name": "dark grey dotted shirt",
+        "price": 1000,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/dark_grey_dotted_shirt.png?raw=true",
+        "ratings":"5",
+        "description": "A sleek and modern dark grey shirt with subtle dotted patterns."
+      },
+      {
+        "id": 4,
+        "name": "flowered fashion shirt",
+        "price": 1500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/flowered_fashion_shirt.png?raw=true",
+        "ratings":"5",
+        "description": "A trendy and feminine shirt with beautiful flower patterns."
+      },
+      {
+        "id": 5,
+        "name": "male tshirt black",
+        "price": 1000,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male_black_tshirt.png?raw=true",
+        "ratings":"4.7",
+        "description": "A classic and versatile black t-shirt for men."
+      },
+      {
+        "id": 6,
+        "name": "male grey fashion shirt",
+        "price": 1500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male__grey_fashion_shirt.png?raw=true",
+        "ratings":"4.8",
+        "description": "A stylish and comfortable grey shirt for men who love fashion."
+      },
+      {
+        "id": 7,
+        "name": "male fashion t-shirt",
+        "price": 1500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male_fashion_tshirt.png?raw=true",
+        "ratings":"5",
+        "description": "A trendy and cool t-shirt that will make you look fashion-forward."
+      },
+      {
+        "id": 8,
+        "name": "male floral black t-shirt",
+        "price": 1000,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/male_tshirt_black.png?raw=true",
+        "ratings":"5",
+        "description": "A simple yet stylish black t-shirt with striped patterns."
+      },
+      {
+        "id": 9,
+        "name": "women fashion top",
+        "price": 1000,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/women_fashion_top.png?raw=true",
+        "ratings":"4.8",
+        "description": "A chic and fashionable top for women who love to dress up."
+      },
+      {
+        "id": 10,
+        "name": "grey fashion male shirt",
+        "price": 1000,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/clothes/grey_fashion_shirt.png?raw=true",
+        "ratings":"5",
+        "description": "A trendy and stylish grey t-shirt for men who love fashion."
+      }
+    ],
+    "shoes": [
+      {
+        "id": 1,
+        "name": "Bata White Unisex Bullets",
+        "price": 899,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Bata%20White%20Unisex%20.png?raw=true",
+        "ratings":"4.9",
+        "description": "If you are looking for stylish products that last longer, look no further than BATA. This renowned brand produces very high quality products while catering to style comfort and global trends "
+      },
+      {
+        "id": 2,
+        "name": "Fashion Ladies Fashion Flat-Bottom Breathable Casual Sneakers",
+        "price": 4000,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/fashion%20ladies%20casual%20breathable%20sneakers.png?raw=true",
+        "ratings":"5",
+        "description": "Unique design, simple fashion, breathable and comfortable sneakers, let your feet get the greatest liberation, and enjoy a cool and comfortable moment."
+      },
+      {
+        "id": 3,
+        "name": "Fashion Ladies Sneaker Shoes Causal",
+        "price": 1500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/fashion_ladies_casual_white.png?raw=true",
+        "ratings":"4.8",
+        "description": "These fashion ladies' sneakers are a trendy and casual shoe option that are perfect for everyday wear during the spring, summer, and autumn seasons. The upper material is made of PUMaterial, which provides a comfortable and breathable fit, and the midsole and outsole are made of durable rubber material"
+      },
+      {
+        "id": 4,
+        "name": "Fashion Mens Sneakers Shoes",
+        "price": 1500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Mens%20Sneakers%20Shoes.png?raw=true",
+        "ratings":"4.9",
+        "description": "These men's fashion sneakers are a stylish and comfortable shoe option that are suitable for daily wear or sports activities. The shoe features a front lace-up wearing style and a flat heel shape with a low heel height (1-3cm). The upper material is made of high-quality mesh, while the sole is made of durable rubber material with injection shoes technology. "
+      },
+      {
+        "id": 5,
+        "name": "Waanzilish Ladies Sneakers Pink ",
+        "price": 799,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashio%20Pink%20Ladies%20Sneakers.png?raw=true",
+        "ratings":"4.7",
+        "description": "These Waanzilish ladies sneakers are perfect for running and sports activities with their breathable pink mesh upper, durable PVC outsole, and comfortable EVA midsole. These high-quality and light shoes are also fashionable and feature cotton fabric lining for added comfort."
+      },
+      {
+        "id": 6,
+        "name": "Fashion Quality Classy Ladies Sneakers -Pink",
+        "price": 2300,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Quality%20Classy%20Ladies%20Sneakers%20-Pink.png?raw=true",
+        "ratings":"5",
+        "description": "These Fashion classy ladies sneakers are designed to survive the test of time and keep your feet comfortable"
+      },
+      {
+        "id": 7,
+        "name": "Fashion Slipon Shoes Loafers",
+        "price": 799,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Slipon%20Shoes%20Loafers%20.png?raw=true",
+        "ratings":"4.8",
+        "description": "These fashion slip-on shoes are perfect for casual wear, walking, and outdoor activities. They feature a black stretch fabric and canvas upper, rubber outsole, and comfortable PVC midsole. Available in sizes 41-44, these shoes also feature anti-slip technology and stylish canvas shoe laces."
+      },
+      {
+        "id": 8,
+        "name": "Fashion Women's Shoes Sandals Frosted Middle Heel",
+        "price": 850,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Fashion%20Women's%20Shoes%20Sandals%20Frosted%20Middle.png?raw=true",
+        "ratings":"4.6",
+        "description": "These heeled sandals are both stylish and practical, providing a cool effect while flattering your figure. The solid color block heel design allows for comfortable and steady walking, making them suitable for a variety of occasions"
+      },
+      {
+        "id": 9,
+        "name": "Women Pointed Ankle Strap With Pendant Hunky",
+        "price":2500,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Generic%20Spring%20Summer%20Women%20Pointed%20Ankle%20Strap.png?raw=true",
+        "ratings":"",
+        "description": "These pointed ankle strap hells come with anti-slip sole and wear-resistant design."
+       
+      },
+      {
+        "id": 10,
+        "name": "Waanzilish Mens Sneakers Shoes",
+        "price": 1099,
+        "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/shoes/Waanzilish%20Men%20S%20Sneakers%20Shoes-fotor-bg.png?raw=true",
+        "ratings":"4.7",
+        "description": "These Waanzilish men's sneakers are perfect for spring and autumn with their breathable and hard-wearing PU upper, rubber midsole and outsole, and fashionable blue color. Available in sizes 39-44, these shoes are ideal for both casual wear and sports activities"
+      }  ],
+      "bags": [
+        {
+          "id": 1,
+          "name": "Fashion Women's Bag Handbag Large Capacity Layered Storage",
+          "price": 1399,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Fashion_Women_s_Bag_Handbag_Large_Capacity_Layered_Storage.png?raw=true",
+          "ratings":"4.9",
+          "description": "This high-quality and affordable bag is designed to carry your everyday items with ease"
+        },
+        {
+          "id": 2,
+          "name": "Tisa Nyota 3 In 1 Ladies Handbags Women Bags Sling Bag-Grey",
+          "price": 1500,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Tisa_Nyota_3_In_1_Ladies_Handbags_Women_Bags_Sling_Bag.png?raw=true",
+          "ratings":"4.9",
+          "description": "3 in 1 handbag set with a main big bag, small sling bag, coin or phone purse and a card holder."
+        },
+        {
+          "id": 3,
+          "name": "Ladies Handbags PU Leather Bucket Bags 4 In 1- With A Bear Doll",
+          "price": 1300,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Tisa_Nyota_Ladies_Handbags_PU_Leather_Bucket_Bags.png?raw=true",
+          "ratings":"5",
+          "description": "Made of high quality chain texture synthetic PU leather with durable gold and smoothly zippers."
+        },
+        {
+          "id": 4,
+          "name": "Fashion 4 In 1 Set Women Bag Ladies Handbag",
+          "price": 1000,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Fashion_4_In_1_Set_Women_Bag_Ladies_Handbag.png?raw=true",
+          "ratings":"4.9",
+          "description": "A bag with a simple and fashionable cut design, which can always combine the feminine beauty with the softness of the bag"
+        },
+        {
+          "id": 5,
+          "name": "Fashion Leather Handbags For Women",
+          "price": 1600,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Fashion_Leather_Handbags_For_Women.png?raw=true",
+          "ratings":"5",
+          "description": "Elegant high-end design goes well with any outfit in any occasions like work/business/dating/Daily/travel/school, and you will feel comfortable to wear it."
+        },
+        {
+          "id": 6,
+          "name": "Women Backpack Bag Shoulder Bags",
+          "price": 2000,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Women_Backpack_Bag_Shoulder_Bags.png?raw=true",
+          "ratings":"4.5",
+          "description": "It's lightweight, spacious and classy. It's big enough to use as a college bag or for casual outing. It is waterproof and very durable worth every penny."
+        },
+        {
+          "id": 7,
+          "name": "Fashion 3pcs/set Shoulder Bag School",
+          "price": 1500,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Fashion_3pcs_set_Shoulder_Bag_School.png?raw=true",
+          "ratings":"4.7",
+          "description": "This school bag is designed to carry your books, laptops and many more, while making you look stylish and fashionable"
+        },
+        {
+          "id": 8,
+          "name": "Men's Business Handbag Password Lock Briefcase",
+          "price": 5000,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Men_s_Business_Handbag_Password_Lock_Briefcase.png?raw=true",
+          "ratings":"5",
+          "description": "This male bag comes with special design features for extra security but still manages to make people stare"
+        },
+        {
+          "id": 9,
+          "name": "Leather Business Briefcase Men ",
+          "price": 3000,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Leather_Business_Briefcase_Men.png?raw=true",
+          "ratings":"5",
+          "description": "This leather business travel bag is lightweight and can be hanged on the shoulders"
+        },
+        {
+          "id": 10,
+          "name": "Leather Waterproof backpack",
+          "price": 1500,
+          "image":"https://github.com/Donvine254/Shella-Trendy/blob/main/images/bags/Leather_waterproof_backpack.png?raw=true",
+          "ratings":"5",
+          "description": "This colorful curved backpacks are anti-humpback, classic and stylish. The back pad is designed to apply to the back without being exposed, does not make the child uncomfortable, absorbs sweat well, has a soft cushion to help reduce the weight of things on the child’s shoulders, avoid sagging shoulders"
+        }
+      ]
+    }
+    
+  
