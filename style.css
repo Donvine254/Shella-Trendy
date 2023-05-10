@@ -810,10 +810,11 @@ body {
   .search-form {
     display: none;
   }
-  .extras {
-    /* display: none; */
-    overflow-x:visible;
-    white-space: nowrap;
+ #ecommerce, .extras{
+    width:100%;
+  }
+  #checkout, #shipping, #track-Order{
+    display: none;
   }
   #footer-wrapper {
     line-height: 1;
@@ -876,11 +877,12 @@ body {
     margin-left: 0;
     margin-right:0;
   }
-  #chatArea {
-    height:100%;
-    width:100%;
+  #chatArea #chatbox-container {
+    height:90%;
+    width:80%;
     margin: 0;
   }
+
   #newsletter {
     width: 100%;
     font-size: 16px;
